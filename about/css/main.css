@@ -1,0 +1,54 @@
+@import "reset.css";
+@import "section.css";
+
+body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    height: 100%;
+    min-height: 900px;
+    background-color: #B9B6E5;
+    background: -moz-linear-gradient(-45deg, #B9B6E5 0%, #2580B3 100%);
+    background: -webkit-linear-gradient(-45deg, #B9B6E5 0%, #2580B3 100%);
+    background: linear-gradient(135deg, #B9B6E5 0%, #2580B3 100%);
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.coa:hover {
+    color: aliceblue;
+}
+
+.ham-menu {
+    height: fit-content;
+    position: absolute;
+    right: 14px;
+}
+
+.ham-menu ul {
+    transition: padding-right 300ms linear;
+}
+
+.ham-menu ul.active {
+    padding-right: 100px;
+}

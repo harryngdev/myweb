@@ -1,0 +1,188 @@
+@media only screen and (max-width: 1230px) {
+    body {
+        height: 100%;
+        min-height: 1825px !important;
+        margin: 0 5%;
+    }
+    .container {
+        position: sticky;
+        top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 37rem;
+        grid-gap: 30px;
+        background-color: #ffffff;
+        border-radius: 20px;
+    }
+    .right {
+        background-color: rgb(247, 249, 250);
+        border-radius: 1rem;
+        position: relative;
+        top: 41rem;
+    }
+    .right .card-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .left .avatar {
+        background-size: cover;
+        width: 6.7rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 2rem;
+    }
+    .contact {
+        display: grid;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+    }
+    .top-container .ham-menu {
+        height: fit-content;
+        position: relative;
+        right: 13px;
+    }
+    .ham-menu ul {
+        padding: 12px;
+    }
+    .top-section .top-container .info p {
+        text-align: justify;
+        line-height: 25px;
+        position: relative;
+        margin: 20px;
+        top: 13px;
+        color: rgb(54, 69, 90);
+        left: -1.9rem;
+        padding: 0 30px;
+    }
+    .latest-news h2 {
+        color: rgb(53, 67, 88);
+    }
+    .email-container {
+        margin: 10px 22%;
+        position: relative;
+        top: -1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .top-section .top-container .info h2 {
+        margin: 20px;
+        padding-bottom: 16px;
+        color: rgb(53, 67, 88);
+    }
+    .location-container, .git-container {
+        position: relative;
+        right: 1.8rem;
+        padding: 5px 0;
+    }
+    .coa {
+        color: rgb(215, 232, 252);
+        text-align: center;
+        padding: 10px 18px;
+        background: #256AF3;
+        background: -moz-linear-gradient(top, #256AF3 0%, #3488F4 100%);
+        background: -webkit-linear-gradient(top, #256AF3 0%, #3488F4 100%);
+        background: linear-gradient(to bottom, #256AF3 0%, #3488F4 100%);
+        border-radius: 24px;
+        padding: 12px 28px;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        width: 10rem;
+    }
+    .code-card, .web-card, .mobile-card, .music-card {
+        margin: 20px;
+    }
+
+    @media only screen and (max-width: 910px) {
+        body {
+            min-height: 2200px !important;
+        }
+        .contact {
+            display: block;
+            padding: 20px 0;
+        }
+        .two-column-section {
+            grid-template-columns: auto;
+        }
+        .two-column-section h2 {
+            font-size: 1.3rem
+        }
+        .right {
+            background-color: rgb(254, 255, 255);
+            height: 84rem;
+        }
+        .top-container .ham-menu {
+            top: -40px;
+        }
+        .top-section .top-container .info h2 {
+            font-size: 1.4rem
+        }
+        .ham-menu ul li a {
+            font-size: smaller;
+        }
+        .education {
+            display: flex;
+            color: rgb(53, 68, 89);
+            margin: 20px;
+            position: relative;
+            justify-content: center;
+        }
+        .two-column-section img {
+            width: 30px;
+            display: block;
+        }
+        .two-column-section h2 {
+            padding: 0px 8px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        .education-info {
+            display: grid;
+            position: absolute;
+            top: 1.8rem;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            min-height: 12rem;
+            left: 0;
+        }
+        .experience {
+            display: flex;
+            color: rgb(53, 68, 89);
+            margin: 20px;
+            flex-direction: row;
+            justify-content: center;
+            top: 14rem;
+            position: relative;
+        }
+        .two-column-section img {
+            width: 30px;
+            display: block;
+        }
+        .experience h2 {
+            margin-right: 0;
+            text-align: center;
+            display: flex;
+        }
+        .experience img {
+            width: 24px;
+        }
+        .experience-info {
+            display: grid;
+            position: absolute;
+            top: 1.7rem;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            min-height: 12rem;
+            left: 0;
+        }
+        .coding, .web {
+            position: relative;
+            top: 28rem;
+            color: rgb(53, 68, 89);
+            margin: 20px;
+        }
+    }
+}

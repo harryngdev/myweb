@@ -1,0 +1,169 @@
+.right {
+    background-color: rgb(255, 255, 255);
+    height: 47rem;
+}
+            
+.top-section .top-container {
+    display: inherit;
+}
+            
+.ham-menu {
+    bottom: 3.5rem;
+}
+/* +++++++++++++++ COLUMN LAYOUT +++++++++++++++ */
+            
+.two-column-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+            
+.two-column-section h2 {
+    padding: 0px 2px;
+}
+            
+.two-column-section img {
+    width: 30px;
+    display: block;
+    position: relative;
+    bottom: 2px;
+    margin-right: 3px;
+}
+            /* +++++++++++++++ EDUCATION  +++++++++++++++ */
+            
+.education {
+    display: flex;
+    color: rgb(53, 68, 89);
+    margin: 20px;
+    position: relative;
+    height: 28px;
+}
+
+.education-info {
+    display: grid;
+    position: absolute;
+    top: 3.8rem;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    min-height: 12rem;
+}
+            
+.education-info span {
+    padding-top: 5px;
+}
+            
+.education-info p {
+    padding-top: 18px;
+    font-size: smaller;
+    line-height: 1.5rem;
+}
+/* +++++++++++++++ EXPERIENCE +++++++++++++++ */
+            
+.experience {
+    display: flex;
+    color: rgb(53, 68, 89);
+    margin: 20px;
+    position: relative;
+    height: 28px;
+}
+            
+.experience img {
+    width: 25px;
+}
+            
+.experience h2 {
+    margin-right: 16rem;
+}
+            
+.experience-info {
+    display: grid;
+    position: absolute;
+    top: 3.8rem;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    min-height: 12rem;
+}
+            
+.experience-info span {
+    padding-top: 5px;
+}
+            
+.experience-info p {
+    padding-top: 18px;
+    font-size: smaller;
+    line-height: 1.5rem;
+}
+/* +++++++++++++++ CODING +++++++++++++++ */
+            
+.coding, .web {
+    position: relative;
+    top: 14rem;
+    color: rgb(53, 68, 89);
+    margin: 20px;
+}
+            
+.coding-info, .web-info {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 20px;
+    font-size: small;
+}
+            
+.coding-info .completed, .web-info .completed {
+    background-color: rgb(236, 236, 244);
+    border-radius: 20px;
+}
+            
+.coding-info .completed .skill, .web-info .completed .skill {
+    display: flex;
+    justify-content: space-between;
+    background: #256af3;
+    background: -moz-linear-gradient(top, #256af3 0%, #3488f4 100%);
+    background: -webkit-linear-gradient(top, #256af3 0%, #3488f4 100%);
+    background: linear-gradient(to bottom, #256af3 0%, #3488f4 100%);
+    border-radius: 20px;
+    padding: 8px;
+    color: rgb(222, 234, 253);
+    margin: 10px 0;
+}
+/* +++++++++++++++ WEB +++++++++++++++ */
+/* +++++++++++++++ PERCENTAGES +++++++++++++++ */
+            
+.fifty {
+    width: 50%;
+}
+            
+.fifty-five-per {
+    width: 55%;
+}
+            
+.sixty-per {
+    width: 60%;
+}  
+
+.seventy-per {
+    width: 70%;
+}
+            
+.seventy-five-per {
+    width: 75%;
+}
+            
+.eighty-five-per {
+    width: 85%;
+}
+            
+.ninety-per {
+    width: 90%;
+}
+/* +++++++++++++++ MEDIA QUERY +++++++++++++++ */
+/*            
+.contact {
+    padding: 18px 0;
+}
+            
+.coa {
+    margin-top: 6rem;
+}*/
