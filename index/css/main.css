@@ -1,25 +1,26 @@
+/* +++++++++++++++++++++++++ font +++++++++++++++++++++++++ */
+@font-face {
+	font-family: my-font;
+	src: url('../font/Calafia-Regular.otf');
+}
+
 * {
 	margin: 0px;
 	padding: 0px;
-	font-family: 'Comic Sans MS', sans-serif;
 }
 
 body {
 	height: 100%;
-	min-height: 800px;
+	min-height: 900px;
 	overflow-x: hidden;
-	background-color: rgb(250, 250, 251);
 }
 
 /* +++++++++++++++++++++++++ header +++++++++++++++++++++++++ */
 .header {
 	height: 100px;
 	padding: 0 20px;
-	background-color: #2580B3;
-    background: -moz-linear-gradient(-45deg, #2580B3 0%, #B9B6E5 100%);
-    background: -webkit-linear-gradient(-45deg, #2580B3 0%, #B9B6E5 100%);
-    background: linear-gradient(135deg, #2580B3 0%, #B9B6E5 100%);
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 0px 0px;
+    background: linear-gradient(to left, #63e2ff, #4f00bc);
 }
 
 .logo-icon {
@@ -82,36 +83,102 @@ body {
 	z-index: -1111;
 }
 
-/* +++++++++++++++++++++++++ content +++++++++++++++++++++++++ */
-.content {
-	height: 200px;
-	margin: 20px 0px 20px 0px;
-	padding: 200px 0px;
-	border-radius: 50px;
-	background-color: rgb(241, 242, 243);
+/* +++++++++++++++++++++++++ box +++++++++++++++++++++++++ */
+.animation-area {
+	background: linear-gradient(to left, #63e2ff, #4f00bc);
+	width: 100%;
+	height: 800px;
 }
 
-.content span {
+.box-area {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.box-area li {
+	position: relative;
+	display: block;
+	list-style: none;
+	width: 50px;
+	height: 20px;
+	background: rgba(255, 255, 255, 0.2);
+	animation: animate 20s linear infinite;
+	bottom: -150px;
+	z-index: 10;
+}
+
+.box-area li:nth-child(1){
+	left: 86%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+ }
+
+.box-area li:nth-child(2){
+	left: 12%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+
+.box-area li:nth-child(3){
+	left: 70%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4){
+	left: 70%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 0s;
+	animation-duration: 15s;
+}
+
+.box-area li:nth-child(5){
+	left: 65%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 0s;
+}
+
+.box-area li:nth-child(6){
+	left: 15%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 3.5s;
+}
+
+/* +++++++++++++++++++++++++ content +++++++++++++++++++++++++ */
+.animation-area .content span {
 	text-transform: uppercase;
 	text-align: center;
 	display: block;
+	position: relative;
+	top: -300px;
 }
 
 .text1 {
+	background: linear-gradient(to left, #63e2ff, #4f00bc);
 	color: rgb(53, 68, 89);
-	background-color: rgb(241, 242, 243);	
-	font-size: 60px;
-	font-weight: 700;
+	font-size: 100px;
+	font-weight: 800;
 	letter-spacing: 8px;
 	position: relative;
 	margin-bottom: 20px;
 	animation: text 2s 1;
+	z-index: 5;
+	font-family: my-font;
 }
 
 .text2 {
-	color: rgb(84, 98, 117);
-
-	font-size: 25px;
+	color: rgb(53, 68, 89);
+	font-size: 30px;
+	font-family: my-font;
 }
 
 /* +++++++++++++++++++++++++ contact +++++++++++++++++++++++++ */
@@ -121,10 +188,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #B9B6E5;
-    background: -moz-linear-gradient(-45deg, #B9B6E5 0%, #2580B3 100%);
-    background: -webkit-linear-gradient(-45deg, #B9B6E5 0%, #2580B3 100%);
-    background: linear-gradient(135deg, #B9B6E5 0%, #2580B3 100%);
 }
 
 .contact .tmp {
@@ -132,7 +195,7 @@ body {
 	height: 60px;
 	border: 3px solid transparent;
 	border-radius: 40px;
-	background-image: linear-gradient(#546275, #546275), radial-gradient(circle at top left, #546275, #354459);
+	background-image: linear-gradient(#546275, #546275), radial-gradient(circle at top left, #63e2ff, #4f00bc);
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 	background-color: rgb(84, 98, 117);
@@ -149,7 +212,7 @@ body {
 	transform: scale(1.1);
 }
 
-.contact .tmp span {
+.animation-area .contact .tmp span {
 	position: absolute;
 	text-transform: uppercase;
 	width: 100%;
@@ -166,12 +229,12 @@ body {
 	color: #ccc;
 }
 
-.contact .tmp:hover span {
+.animation-area .contact .tmp:hover span {
 	transform: translateX(-100%);
 	transition-delay: .3s;
 }
 
-.contact .tmp a {
+.animation-area .contact .tmp a {
 	flex: 1;
 	font-size: 26px;
 	color: #ccc;
@@ -181,30 +244,30 @@ body {
 	transition: 0.4s linear;
 }
 
-.contact .tmp:hover a {
+.animation-area .contact .tmp:hover a {
 	opacity: 1;
 	transform: translateX(0);
 }
 
-.contact .tmp a:nth-of-type(1) {
+.animation-area .contact .tmp a:nth-of-type(1) {
 	transition-delay: 1s
 }
 
-.contact .tmp a:nth-of-type(2) {
+.animation-area .contact .tmp a:nth-of-type(2) {
 	transition-delay: 0.8s
 }
 
-.contact.tmp a:nth-of-type(3) {
+.animation-area .contact.tmp a:nth-of-type(3) {
 	transition-delay: 0.6s
 }
 
-.contact .tmp a:nth-of-type(4) {
+.animation-area .contact .tmp a:nth-of-type(4) {
 	transition-delay: 0.4s
 }
 
 
 /* +++++++++++++++++++++++++ animation +++++++++++++++++++++++++ */
- @keyframes text {
+@keyframes text {
 	0% {
 		margin-bottom: -40px;
 	}
@@ -215,5 +278,17 @@ body {
 	85% {
 		letter-spacing: 8px;
 		margin-bottom: -40px;
+	}
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
 	}
 }

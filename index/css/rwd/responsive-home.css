@@ -14,7 +14,7 @@
 		padding: 80px 0;
 		line-height: normal;
 		transition: 0.7s;
-		z-index: 4;
+		z-index: 10;
 	}
 
 	.menu a {
@@ -36,15 +36,21 @@
 
 	.text1 {
 		position: relative;
-		z-index: 3;
+		z-index: 4;
 	}
 
-	.text1 {
+	.text2 {
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 	}
 
 	.contact {
 		position: relative;
+		z-index: 2;
+	}
+
+	.box-area {
+		position: relative;
 		z-index: 1;
+	}
 }
