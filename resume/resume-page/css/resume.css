@@ -130,34 +130,38 @@
 }
 /* +++++++++++++++ WEB +++++++++++++++ */
 /* +++++++++++++++ PERCENTAGES +++++++++++++++ */
-            
-.fifty {
+.fifty-per {
     width: 50%;
 }
             
-.fifty-five-per {
-    width: 55%;
+.thirty-five-per {
+    width: 35%;
+}
+            
+.twenty-per {
+    width: 20%;
+}  
+
+.fifteen-per {
+    width: 15%;
 }
             
 .sixty-per {
     width: 60%;
-}  
+}
+            
+.forty-per {
+    width: 40%;
+}
+            
+.twenty-per {
+    width: 20%;
+}
 
-.seventy-per {
-    width: 70%;
+.thirty-per {
+    width: 30%;
 }
-            
-.seventy-five-per {
-    width: 75%;
-}
-            
-.eighty-five-per {
-    width: 85%;
-}
-            
-.ninety-per {
-    width: 90%;
-}
+
 /* +++++++++++++++ MEDIA QUERY +++++++++++++++ */
 /*            
 .contact {
