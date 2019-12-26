@@ -11,8 +11,8 @@
 
 body {
 	height: 100%;
-	min-height: 900px;
 	overflow-x: hidden;
+	background: linear-gradient(to left, #63e2ff, #4f00bc);
 }
 
 /* +++++++++++++++++++++++++ header +++++++++++++++++++++++++ */
