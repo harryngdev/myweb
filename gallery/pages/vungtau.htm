@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="keywords" content="nvanhaf, nguyen van ha, ha" />
-	<meta name="description" content="My Web" />
+	<!-- HTML Meta Tags -->
+	<meta name="keywords" content="nvanhaf, nguyen van ha, ha, myweb, ctu, can tho, gallery, album, photo, vungtau, vung tau, it, programmer, coding, web development, responsive design, java, python, c, html, css, js" />
+	<meta name="description" content="My photo gallery, which stores moments with family and friends." />
 	<meta name="author" content="Nguyen Van Ha" />
+	
+	<!-- Google / Search Engine Tags -->
+	<meta itemprop="name" content="GALLERY | Vung Tau | NVAN.HAF" />
+	<meta itemprop="description" content="My photo gallery, which stores moments with family and friends." />
+	<meta itemprop="image" content="https://raw.githubusercontent.com/Pulpx111120/nvanhaf/master/index/img/logo-250x250.png" />
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://pulpx111120.github.io/nvanhaf/gallery/pages/vungtau.htm" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="GALLERY | Vung Tau | NVAN.HAF" />
+	<meta property="og:description" content="My photo gallery, which stores moments with family and friends." />
+	<meta property="og:image" content="https://raw.githubusercontent.com/Pulpx111120/nvanhaf/master/index/img/logo-250x250.png" />
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="GALLERY | Vung Tau | NVAN.HAF" />
+	<meta name="twitter:description" content="My photo gallery, which stores moments with family and friends." />
+	<meta name="twitter:image" content="https://raw.githubusercontent.com/Pulpx111120/nvanhaf/master/index/img/logo-250x250.png" />
+
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Vung Tau | Gallery | NVAN.HAF</title>
+	<title>GALLERY | Vung Tau | NVAN.HAF</title>
 	<link 
 		rel="apple-touch-icon"
 		sizes="180x180"
@@ -29,8 +49,32 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" />
 </head>
 <body>
+
+<div class="header">
+	<img src="../img/logo/logo-75x75.png" alt="logo icon" class="logo-icon" />
+
+	<h2 class="logo-text">nvan.haf</h2>
+
+	<input type="checkbox" id="chk" />
+	<label for="chk" class="show-menu-btn">
+		<i class="fas fa-ellipsis-h"></i>
+	</label>
+
+	<ul class="menu">
+		<a href="../../index.htm">Home</a>
+		<a href="../albums.htm">Gallery</a>
+		<a href="../../error/error.htm">Blog</a>
+		<a href="../../error/error.htm">Music</a>
+		<a href="../../error/error.htm">Game</a>
+		<a href="../../about/about.htm">About</a>
+		<label for="chk" class="hide-menu-btn">
+			<i class="fas fa-times"></i>
+		</label>
+	</ul>
+</div>
 
 <div class="gallery-section">
 	<div class="inner-width">

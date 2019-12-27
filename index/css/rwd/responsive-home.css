@@ -1,4 +1,14 @@
 @media screen and (max-width: 800px) {
+	.logo-icon {
+		top: 13px;
+		left: 20px;
+	}
+
+	.logo-text {
+		top: 40px;
+		left: 100px;
+	}
+
 	.show-menu-btn, .hide-menu-btn {
 		display: block;
 	}
