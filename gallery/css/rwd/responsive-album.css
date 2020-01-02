@@ -1,4 +1,4 @@
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
 	main {
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20px;
@@ -48,23 +48,28 @@
 		right: 0;
 		color: #fff;
 	}
+
+	@media screen and (max-width: 767px) {
+		main {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 15px;
+		}
+
+		header {
+			width: 95%;
+		}
+
+		.imgContent {
+			bottom: 0;
+		}
+		
+		@media screen and (max-width: 500px) {
+			main {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+	}
 }
 
-@media (max-width: 767px) {
-	main {
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 15px;
-	}
-	header {
-		width: 95%;
-	}
-	.imgContent {
-		bottom: 0;
-	}
-}
 
-@media (max-width: 500px) {
-	main {
-		grid-template-columns: repeat(1, 1fr);
-	}
-}
+

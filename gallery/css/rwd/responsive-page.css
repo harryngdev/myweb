@@ -47,16 +47,16 @@
 		right: 0;
 		color: #fff;
 	}
-}
 
-@media screen and (max-width: 768px) {
-	.gallery-section .image {
-		flex: 50%;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	.gallery-section .image {
-		flex: 100%;
+	@media screen and (max-width: 768px) {
+		.gallery-section .image {
+			flex: 50%;
+		}
+		
+		@media screen and (max-width: 480px) {
+			.gallery-section .image {
+				flex: 100%;
+			}
+		}
 	}
 }
