@@ -11,10 +11,10 @@ body {
     font-family: sans-serif;
     height: 100%;
     min-height: 900px;
-    background-color: #63e2ff;
-    background: -moz-linear-gradient(-45deg, #63e2ff 0%, #4f00bc 100%);
-    background: -webkit-linear-gradient(-45deg, #63e2ff 0%, #4f00bc 100%);
-    background: linear-gradient(135deg, #63e2ff 0%, #4f00bc 100%);
+    background-color: #000032;
+    background: -moz-linear-gradient(-45deg, #000032 0%, #df5a49 100%);
+    background: -webkit-linear-gradient(-45deg, #000032 0%, #df5a49 100%);
+    background: linear-gradient(135deg, #000032 0%, #df5a49 100%);
 }
 
 .wrapper {
@@ -36,7 +36,7 @@ a {
 }
 
 .coa:hover {
-    color: aliceblue;
+    color: rgb(162, 192, 249);
 }
 
 .ham-menu ul {

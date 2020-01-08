@@ -3,15 +3,15 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat', sans-serif;
-	background: rgba(116, 185, 255, 0.09);
+	font-family: 'Comfortaa', cursive;
+	background-color: #fdf3f0;
 }
 
 /* +++++++++++++++++++++++++ header +++++++++++++++++++++++++ */
 .header {
 	height: 100px;
-	padding: 0 20px;
-    background: rgba(116, 185, 255, 0.09);
+	padding: 0 40px;
+    background-color: #fdf8f6;
     box-sizing: border-box;
 	box-shadow: 0 2px 10px #ccc;
 }
@@ -19,16 +19,19 @@ body {
 .logo-icon {
 	position: absolute;
 	top: 13px;
-	left: 50px;
+	left: 40px;
 }
 
 .logo-text {
 	position: absolute;
-	top: 20px;
-	left: 130px;
-	text-transform: uppercase;
-	font-family: sans-serif;
-	color: #00345a;
+	top: 8px;
+	left: 110px;
+	font-family: 'Candal', sans-serif;
+	color: #df5a49;
+}
+
+.logo-text span {
+	color: #000032;
 }
 
 .menu {
@@ -43,9 +46,9 @@ body {
 	text-decoration: none;
 	padding: 0 10px;
 	transition: 0.4s;
-	color: rgb(53, 68, 89);
-	font-family: "montserrat", sans-serif;
-	font-size: 16px;
+	color: #000032;
+	font-family: 'Comfortaa', cursive;
+	font-size: 15px;
 	font-weight: 900;
 	letter-spacing: 3px;
 }
@@ -63,13 +66,13 @@ body {
 
 .show-menu-btn i {
 	line-height: 100px;
-	color: rgb(53, 68, 89);
+	color: #000032;
 }
 
 .menu a:hover, 
 .show-menu-btn:hover, 
 .hide-menu-btn:hover {
-	color: rgb(84, 98, 117);
+	color: #ccc;
 }
 
 #chk {
@@ -82,7 +85,6 @@ body {
 section {
 	padding: 70px 0;
 	margin-top: 0;
-	background: rgba(116, 185, 255, 0.09);
 	text-align: center;
 }
 
