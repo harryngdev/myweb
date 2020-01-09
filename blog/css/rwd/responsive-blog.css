@@ -1,0 +1,89 @@
+@media screen and (max-width: 1250px) {
+	.content {
+		width: 100%;
+	}
+
+	.content .main-content {
+		width: 100%;
+	}
+
+	.content .sidebar {
+		width: 100%;
+	}
+
+	.content .sidebar .section.search {
+		margin: 50px 20px;
+	}
+
+	.content .sidebar .section.topics {
+		margin: 0px 20px;
+	}
+
+	@media screen and (max-width: 900px) {
+		.header .logo-icon {
+			left: 10px;
+		}
+
+		.header .logo-text {
+			left: 80px;
+		}
+
+		.show-menu-btn, .hide-menu-btn {
+			display: block;
+		}
+
+		.menu {
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background: #333;
+			right: -100%;
+			top: 0;
+			text-align: center;
+			padding: 80px 0;
+			line-height: normal;
+			transition: 0.7s;
+			z-index: 10;
+		}
+
+		.menu a {
+			display: block;
+			padding: 20px;
+			color: #fff;
+		}
+
+		.hide-menu-btn {
+			position: absolute;
+			top: 40px;
+			right: 40px;
+		}
+
+		#chk:checked ~ .menu {
+			right: 0;
+			color: #fff;
+		}
+
+		.footer {
+			height: auto;
+		}
+
+		.footer .footer-content {
+			height: auto;
+			flex-direction: column;
+		}
+
+		.content .main-content .post {
+			height: auto;
+		}
+
+		.content .main-content .post .post-image {
+			width: 100%;
+
+		}
+
+		.content .main-content .post .post-preview {
+			width: 100%;
+			margin: 20px -20px;
+		}
+	}
+}
