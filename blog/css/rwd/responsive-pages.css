@@ -50,4 +50,9 @@
 		height: auto;
 		flex-direction: column;
 	}
+
+	.content .main-content .post img {
+		width: 100%;
+		height: auto;
+	}
 }

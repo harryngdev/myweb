@@ -100,6 +100,11 @@ body {
 	margin-bottom: 50px;
 }
 
+.content .main-content .post img {
+	width: auto;
+	height: 400px;
+}
+
 .content .main-content .post p.sub {
 	margin: 0 40px;
 	font-size: 18px;
