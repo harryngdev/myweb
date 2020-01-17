@@ -1,79 +1,34 @@
+/* +++++++++++++++++++++++++ body +++++++++++++++++++++++++ */
 body {
+	overflow: hidden;
 	margin: 0;
 	padding: 0;
 	font-family: 'Comfortaa', cursive;
-	height: 100%;
-	background: #fdf3f0;
 }
 
-/* +++++++++++++++++++++++++ box +++++++++++++++++++++++++ */
-.animation-area {
-	width: 100%;
-	height: 100%;
+body:before {
+ 	content: '';
+ 	background: #df5a49 url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png);
+ 	background-blend-mode: multiply;
+ 	mix-blend-mode: multiply;
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	z-index: 1;
 }
 
-.box-area {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+/* +++++++++++++++++++++++++ canvas +++++++++++++++++++++++++ */
+canvas {
+ 	opacity: 0;
+ 	transition: 1s opacity cubic-bezier(0.55, 0, 0.1, 1);
 }
 
-.box-area li {
-	position: relative;
-	display: block;
-	list-style: none;
-	width: 50px;
-	height: 20px;
-	background: linear-gradient(to left, #000032, #df5a49);
-	animation: animate 20s linear infinite;
-	bottom: -150px;
-	z-index: 10;
+canvas.ready {
+ 	opacity: 0.4;
 }
 
-.box-area li:nth-child(1){
-	left: 86%;
-	width: 80px;
-	height: 80px;
-	animation-delay: 0s;
- }
-
-.box-area li:nth-child(2){
-	left: 12%;
-	width: 30px;
-	height: 30px;
-	animation-delay: 1.5s;
-	animation-duration: 10s;
-}
-
-.box-area li:nth-child(3){
-	left: 70%;
-	width: 100px;
-	height: 100px;
-	animation-delay: 5.5s;
-}
-
-.box-area li:nth-child(4){
-	left: 70%;
-	width: 150px;
-	height: 150px;
-	animation-delay: 0s;
-	animation-duration: 15s;
-}
-
-.box-area li:nth-child(5){
-	left: 65%;
-	width: 40px;
-	height: 40px;
-	animation-delay: 0s;
-}
-
-.box-area li:nth-child(6){
-	left: 15%;
-	width: 110px;
-	height: 110px;
-	animation-delay: 3.5s;
-}
 
 /* +++++++++++++++++++++++++ container +++++++++++++++++++++++++ */
 .container {
@@ -82,15 +37,16 @@ body {
 	top: 50%;
 	transform: translateY(-50%);
 	text-align: center;
-	color: #000032;
+	color: #fdf8f6;
+	z-index: 2;
 }
 
 .container h2 {
-	color: #000032;
+	color: #fdf8f6;
 }
 
 .container p {
-	color: #000032;
+	color: #fdf8f6;
 	font-weight: bolder;
 }
 
@@ -100,7 +56,7 @@ body {
 	margin: 0;
 	font-weight: 900;
 	letter-spacing: 20px;
-	background: linear-gradient(125deg, #000032, #df5a49) center no-repeat;
+	background: linear-gradient(125deg, #fdf3f0, #fdf8f6) center no-repeat;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 }
@@ -108,7 +64,7 @@ body {
 .container a {
 	text-decoration: none;
 	background-color: rgb(84, 98, 117);
-	color: #fff;
+	color: #fdf8f6;
 	padding: 12px 24px;
 	display: inline-block;
 	border-radius: 25px;
@@ -119,17 +75,4 @@ body {
 
 .container a:hover {
 	background-color: rgb(53, 68, 89);
-}
-
-/* +++++++++++++++++++++++++ animation +++++++++++++++++++++++++ */
-@keyframes animate {
-	0% {
-		transform: translateY(0) rotate(0deg);
-		opacity: 1;
-	}
-
-	100% {
-		transform: translateY(-800px) rotate(360deg);
-		opacity: 0;
-	}
 }
