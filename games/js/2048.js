@@ -1,3 +1,5 @@
+alert("Only for computers");
+
 const NUMBER_OF_DBS = 1;
 const ROW = 5;
 const COL = 5;
