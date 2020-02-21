@@ -98,32 +98,33 @@ body {
 .content .main-content .post-title {
 	font-family: 'Candal', sans-serif;
 	margin-bottom: 50px;
+	color: hsl(0, 0%, 13%);
 }
 
 .content .main-content .post img {
 	width: auto;
 	height: 400px;
+	margin: 20px 0;
 }
 
 .content .main-content .post p.sub {
 	margin: 0 40px;
 	font-size: 18px;
+	color: hsl(0, 0%, 25%);
 }
 
 .content .main-content .post p.tit_1 {
 	margin: 0 40px;
 	font-size: 25px;
 	font-weight: 900;
+	color: hsl(0, 0%, 15%);
 }
 
 .content .main-content .post p.tit_2 {
 	margin: 0 40px;
 	font-size: 20px;
 	font-weight: 700;
-}
-
-.content .main-content .post img {
-	margin: 20px 0;
+	color: hsl(0, 0%, 20%);
 }
 
 /* +++++++++++++++++++++++++ sidebar +++++++++++++++++++++++++ */
@@ -183,7 +184,7 @@ body {
 .footer {
 	background-color: #303036;
 	height: 220px;
-	color: #e0e0e0;
+	color: hsl(0, 0%, 87%);
 }
 
 .footer .footer-content {
@@ -193,7 +194,7 @@ body {
 
 .footer .footer-bottom {
 	background-color: #343a40;
-	color: #e0e0e0;
+	color: hsl(0, 0%, 87%);
 	height: 20px;
 	text-align: center;
 	line-height: 20px;
@@ -233,15 +234,19 @@ body {
 }
 
 .footer .footer-content .footer-section p {
-	color: #ccc;
+	color: hsl(0, 0%, 71%);
+}
+
+.footer .footer-content .footer-section a {
+	text-decoration: none;
 }
 
 .footer .footer-content .footer-section .socials  a {
-	color: #ccc;
+	color: hsl(0, 0%, 71%);
 	padding: 10px;
 	margin: 5px;
 	border: 1px solid #e0e0e0;
-	border-radius: 12px;
+	border-radius: 1em;
 }
 
 .footer .footer-content .footer-section ul {
@@ -255,12 +260,16 @@ body {
 	padding: 15px 0px 15px 0px;
 	transition: all 0.3s;
 	text-decoration: none;
-	color: #ccc;
+	color: hsl(0, 0%, 71%);
 }
 
 .footer .footer-content .footer-section ul li a:hover {
 	padding-left: 10px;
 	transition: all 0.3s;
+}
+
+.footer .footer-content .footer-section .text-input {
+	color: hsl(0, 0%, 55%);
 }
 
 .btn {

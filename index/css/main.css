@@ -106,6 +106,7 @@ body {
 	list-style: none;
 	width: 50px;
 	height: 20px;
+	border-radius: 1em;
 	background: linear-gradient(to left, #000032, #df5a49);
 	animation: animate 20s linear infinite;
 	bottom: -150px;

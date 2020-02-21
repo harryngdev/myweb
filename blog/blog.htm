@@ -58,9 +58,13 @@
 <body>
 
 <div class="header">
-	<img src="./img/logo/logo-80x80.png" alt="logo icon" class="logo-icon" />
+	<a href="../index.htm">
+		<img src="./img/logo/logo-80x80.png" alt="logo icon" class="logo-icon" />
+	</a>
 
-	<h1 class="logo-text"><span>nvan.</span>haf</h1>
+	<a href="../index.htm">
+		<h1 class="logo-text"><span>nvan.</span>haf</h1>
+	</a>
 
 	<input type="checkbox" id="chk" />
 	<label for="chk" class="show-menu-btn">
@@ -83,10 +87,11 @@
 	<div class="main-content">
 		<h1 class="recent-post-title">Recent Posts</h1>
 
+		<a name="post_1"></a>
 		<div class="post">
 			<img src="./img/blog_1/1.png" class="post-image" />
 			<div class="post-preview">
-				<h1><a href="./pages/blog_1.htm">My first programming language</a></h1>
+				<h1><a href="./pages/blog_1.htm" target="_blank">My first programming language</a></h1>
 				<br />
 				<i class="far fa-user"><a href="https://www.facebook.com/nguyenvanha111120" target="_blank"> nvan.haf</a></i>
 				&nbsp;&nbsp;
@@ -96,14 +101,15 @@
 					Pascal was the first programming language that I had access to. It's really great...
 				</p>
 				<br />
-				<a href="./pages/blog_1.htm" class="btn read-more">Read More</a>
+				<a href="./pages/blog_1.htm" class="btn read-more" target="_blank">Read More</a>
 			</div>
 		</div>
 
+		<a name="post_2"></a>
 		<div class="post">
 			<img src="./img/blog_2/1.jpeg" class="post-image" />
 			<div class="post-preview">
-				<h1><a href="../error/error.htm">Create Chat Bot with Google Script</a></h1>
+				<h1><a href="../error/error.htm" target="_blank">Create Chat Bot with Google Script</a></h1>
 				<br />
 				<i class="far fa-user"><a href="https://www.facebook.com/nguyenvanha111120" target="_blank"> nvan.haf</a></i>
 				&nbsp;&nbsp;
@@ -113,7 +119,7 @@
 					Writing a Chat Bot application that reminds you of class schedules has never been easier...
 				</p>
 				<br />
-				<a href="../error/error.htm" class="btn read-more">Coming soon</a>
+				<a href="../error/error.htm" class="btn read-more" target="_blank">Coming soon</a>
 			</div>
 		</div>
 	</div>
@@ -141,9 +147,12 @@
 <div class="footer">
 	<div class="footer-content">
 		<div class="footer-section about">
-			<h1 class="logo-text"><span>nvan.</span>haf</h1>
+			<a href="../index.htm">
+				<h1 class="logo-text"><span>nvan.</span>haf</h1>
+			</a>
+
 			<p>
-				Comments if you find it useful, all of your contributions will help my blog grow. Thanks very much.
+				Comments if you find it useful, all of your contributions will help my blog grow. So hope you guys like it and thanks very much!!!
 			</p>
 			<br /><br />
 			<div class="socials">
@@ -158,14 +167,14 @@
 			<h2>Quick Links</h2>
 			<br />
 			<ul>
-				<li><a href="./pages/blog_1.htm">My first programming language</a></li>
-				<li><a href="blog.htm">Create Chat Bot with Google Script</a></li>
+				<li><a href="#post_1">My first programming language</a></li>
+				<li><a href="#post_2">Create Chat Bot with Google Script</a></li>
 			</ul>
 		</div>
 
 		<div class="footer-section contact-form">
 			<h2>Contact me</h2>
-			<form action="blog.htm" method="post">
+			<form action="blog.htm" method="post" >
 				<input type="email" name="email" class="text-input contact-input" placeholder="Your email address..." />
 				<textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
 				<button type="submit" class="btn btn-big contact-btn">

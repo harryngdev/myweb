@@ -114,7 +114,6 @@ body {
 	height: 270px;
 	margin: 20px auto;
 	border-radius: 5px;
-	color: #000032;
 	background-color: #fdf8f6;
 	box-sizing: border-box;
 	box-shadow: 0 2px 10px #ccc;
@@ -134,7 +133,15 @@ body {
 
 .content .main-content .post .post-preview h1 a {
 	font-family: 'Candal', sans-serif;
-	color: #000032;
+	color: hsl(0, 0%, 13%);
+}
+
+.content .main-content .post .post-preview i, i a{
+	color: hsl(0, 0%, 45%);
+}
+
+.content .main-content .post .post-preview p {
+	color: hsl(0, 0%, 29%);
 }
 
 .btn {
@@ -172,7 +179,7 @@ body {
 
 .text-input {
 	font-family: 'Lora', serif;
-	color: #444;
+	color: hsl(0, 0%, 45%);
 	background-color: #fdf3f0;
 	border-radius: 5px;
 	border: 1px solid #e0e0e0;
@@ -193,6 +200,7 @@ body {
 	display: block;
 	padding: 15px 0px 15px 0px;
 	transition: all 0.3s;
+	color: hsl(0, 0%, 29%);
 }
 
 .content .sidebar .section.topics ul li a:hover {
@@ -202,13 +210,14 @@ body {
 
 .content .sidebar .section .section-title {
 	margin: 10px 0px 10px 0px;
+	color: hsl(0, 0%, 13%);
 }
 
 /* +++++++++++++++++++++++++ footer +++++++++++++++++++++++++ */
 .footer {
 	background-color: #303036;
 	height: 220px;
-	color: #e0e0e0;
+	color: hsl(0, 0%, 87%);
 }
 
 .footer .footer-content {
@@ -218,7 +227,7 @@ body {
 
 .footer .footer-bottom {
 	background-color: #343a40;
-	color: #e0e0e0;
+	color: hsl(0, 0%, 87%);
 	height: 20px;
 	text-align: center;
 	line-height: 20px;
@@ -258,15 +267,19 @@ body {
 }
 
 .footer .footer-content .footer-section p {
-	color: #ccc;
+	color: hsl(0, 0%, 71%);
+}
+
+.footer .footer-content .footer-section a {
+	text-decoration: none;
 }
 
 .footer .footer-content .footer-section .socials  a {
-	color: #ccc;
+	color: hsl(0, 0%, 71%);
 	padding: 10px;
 	margin: 5px;
 	border: 1px solid #e0e0e0;
-	border-radius: 12px;
+	border-radius: 1em;
 }
 
 .footer .footer-content .footer-section ul {
@@ -280,10 +293,14 @@ body {
 	padding: 15px 0px 15px 0px;
 	transition: all 0.3s;
 	text-decoration: none;
-	color: #ccc;
+	color: hsl(0, 0%, 71%);
 }
 
 .footer .footer-content .footer-section ul li a:hover {
 	padding-left: 10px;
 	transition: all 0.3s;
+}
+
+.footer .footer-content .footer-section .text-input {
+	color: hsl(0, 0%, 55%);
 }
