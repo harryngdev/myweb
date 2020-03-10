@@ -1,5 +1,4 @@
-var loader = document.getElementById("loader-wrapper")
-
-window.addEventListenner("load", function(){
-	loader.style.display = "none";
+$(window).on('load', function(){
+	$(".loading-screen").fadeOut("slow")
+	//fadeOut(1500)
 });

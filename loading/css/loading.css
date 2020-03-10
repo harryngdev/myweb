@@ -1,22 +1,18 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
 .loading-screen {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100vh;
-	background: #f5f5f5;
+	height: 100%;
+	background: #fdf3f0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	z-index: 10000;
 }
 
-.logo {
+.loading-logo {
 	width: 48px;
 	height: 48px;
 	animation: loader 2s infinite ease;
@@ -35,13 +31,13 @@
 	content: "";
 	width: 68px;
 	height: 2px;
-	background: #0073b1;
+	background: #de5646;
 	position: absolute;
 	left: -34px;
-	animation: bluebar 1.5s infinite ease;
+	animation: bar 1.5s infinite ease;
 }
 
-@keyframes bluebar {
+@keyframes bar {
 	50% {
 		left: 96px;
 	}
