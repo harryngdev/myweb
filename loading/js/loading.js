@@ -1,4 +1,4 @@
 $(window).on('load', function(){
-	$(".loading-screen").fadeOut("slow")
-	//fadeOut(1500)
+	// $(".loading-screen").fadeOut("slow")
+	$(".loading-screen").fadeOut(1500)
 });
