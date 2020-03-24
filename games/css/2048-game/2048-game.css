@@ -1,90 +1,90 @@
 body {
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background: #222;
-	font-family: monospace;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #222;
+  font-family: monospace;
 }
 
 /* +++++++++++++++++++++++++ header +++++++++++++++++++++++++ */
 .header {
-	height: 100px;
-	padding: 0 40px;
+  height: 100px;
+  padding: 0 40px;
   border-radius: 5px 5px 5px 5px;
   background: #171717;
   box-sizing: border-box;
-	box-shadow: 0 2px 10px #9161f5;
+  box-shadow: 0 2px 10px #9161f5;
 }
 
 .logo-icon {
-	position: absolute;
-	top: 13px;
-	left: 40px;
+  position: absolute;
+  top: 13px;
+  left: 40px;
 }
 
 .logo-text {
-	position: absolute;
-	top: 8px;
-	left: 110px;
-	font-family: 'Candal', sans-serif;
-	color: #ffffff;
+  position: absolute;
+  top: 8px;
+  left: 110px;
+  font-family: 'Candal', sans-serif;
+  color: #ffffff;
 }
 
 .logo-text span {
-	color: #9161f5;
+  color: #9161f5;
 }
 
 .menu {
-	line-height: 100px;
-	float: right;
-	margin: 0px;
-	padding: 0px;
+  line-height: 100px;
+  float: right;
+  margin: 0px;
+  padding: 0px;
 }
 
 .menu a {
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 0 10px;
-	transition: 0.4s;
-	color: #82878d;
-	font-family: 'Comfortaa', cursive;
-	font-size: 15px;
-	font-weight: 900;
-	letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+  color: #82878d;
+  font-family: 'Comfortaa', cursive;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 3px;
 }
 
 .show-menu-btn, .hide-menu-btn {
-	transition: 0.4s;
-	font-size: 30px;
-	cursor: pointer;
-	display: none;
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
 }
 
 .show-menu-btn {
-	float: right;
+  float: right;
 }
 
 .show-menu-btn i {
-	line-height: 100px;
-	color: #9161f5;
+  line-height: 100px;
+  color: #9161f5;
 }
 
 .menu a:hover, 
 .show-menu-btn:hover, 
 .hide-menu-btn:hover {
-	color: #8bbfcc;
+  color: #8bbfcc;
 }
 
 #chk {
-	position: absolute;
-	visibility: hidden;
-	z-index: -1111;
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
 }
 
 /* +++++++++++++++++++++++++ content +++++++++++++++++++++++++ */
 .content-game {
- 	text-align: center;
- 	position: relative;
+  text-align: center;
+  position: relative;
   color: #ccc;
   font-size: 2em;
   font-weight: 500;
@@ -92,15 +92,15 @@ body {
 }
 
 #point {
-	text-align: center;
-	font-size: 35px;
-	color: #ce372b;
+  text-align: center;
+  font-size: 35px;
+  color: #ce372b;
 }
 
 .how-to-play {
-	position: fixed;
-	right: 10px;
-	top: 120px;
+  position: fixed;
+  right: 10px;
+  top: 120px;
   background: #ccc;
   width: 100px;
   height: 30px;
@@ -117,20 +117,20 @@ body {
 }
 
 .dialog-menu {
-	padding: 0;
-	text-align: center;
+  padding: 0;
+  text-align: center;
 }
 
 .dialog-menu button {
-	width: 100px;
+  width: 100px;
 }
 
 .rule {
-	padding-left: 0;
-	padding-right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 /* +++++++++++++++++++++++++ canvas +++++++++++++++++++++++++ */

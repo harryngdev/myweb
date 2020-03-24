@@ -1,10 +1,6 @@
 @media screen and (max-width: 900px) {
-	.header .logo-icon {
-		left: 10px;
-	}
-
-	.header .logo-text {
-		left: 80px;
+	.header {
+		height: 170px;
 	}
 
 	.show-menu-btn, .hide-menu-btn {
@@ -33,13 +29,17 @@
 
 	.hide-menu-btn {
 		position: absolute;
-		top: 40px;
-		right: 40px;
+		right: 20px;
+		top: 20px;
 	}
 
 	#chk:checked ~ .menu {
 		right: 0;
 		color: #fff;
+	}
+
+	.content {
+		width: 85%;
 	}
 
 	.footer {

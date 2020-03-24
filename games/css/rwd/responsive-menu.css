@@ -1,21 +1,6 @@
-@media screen and (max-width: 992px) {
-	.container {
-		width: 100%;
-		flex-direction: column;
-		align-items: center;
-		margin-top: 200px;
-	}
-
-	.container .card {
-		width: 400px;
-	}
-
-	.logo-icon {
-		left: 10px;
-	}
-
-	.logo-text {
-		left: 80px;
+@media screen and (max-width: 1160px) {
+	.header {
+		height: 170px;
 	}
 
 	.show-menu-btn, .hide-menu-btn {
@@ -44,16 +29,34 @@
 
 	.hide-menu-btn {
 		position: absolute;
-		top: 40px;
-		right: 40px;
+		right: 20px;
+		top: 20px;
 	}
 
 	#chk:checked ~ .menu {
 		right: 0;
 		color: #fff;
 	}
-	
-	@media screen and (max-width: 768px) {
+
+	.container {
+		flex-direction: column;
+		align-items: center;
+		margin: 50px 0;
+	}
+
+	.container .card {
+		width: 400px;
+	}
+
+	.container .card .content {
+		margin-left: 80px;
+	}
+
+	@media screen and (max-width: 700px) {
+		.container {
+			margin: 0;
+		}
+
 		.container .card {
 			max-width: 300px;
 			flex-direction: column;
@@ -80,6 +83,8 @@
 		.container .card .content {
 			position: relative;
 			width: 100%;
+			margin-left: 0px;
+			padding: 20px 5px;
 		}
 	}
 }
