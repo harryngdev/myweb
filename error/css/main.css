@@ -52,10 +52,10 @@ canvas.ready {
 
 .container h1 {
 	font-family: "montserrat", sans-serif;
-	font-size: 160px;
+	font-size: 130px;
 	margin: 0;
 	font-weight: 900;
-	letter-spacing: 20px;
+	letter-spacing: 10px;
 	background: linear-gradient(125deg, #fdf3f0, #fdf8f6) center no-repeat;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;

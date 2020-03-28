@@ -1,0 +1,15 @@
+@media screen and (max-width: 610px){
+	.container h1 {
+		font-size: 70px;
+		font-weight: 900;
+		letter-spacing: 5px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.container h1 {
+		font-size: 40px;
+		font-weight: 900;
+		letter-spacing: 2px;
+	}
+}

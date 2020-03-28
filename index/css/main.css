@@ -226,7 +226,7 @@ body {
 	font-family: 'Comfortaa', cursive;
 	font-size: 20px;
 	letter-spacing: 1px;
-	color: #ccc;
+	color: #f7f9fb;
 }
 
 .animation-area .contact .tmp:hover span {
@@ -237,7 +237,7 @@ body {
 .animation-area .contact .tmp a {
 	flex: 1;
 	font-size: 26px;
-	color: #ccc;
+	color: #f7f9fb;
 	text-align: center;
 	transform: translateX(-100%);
 	opacity: 0;
@@ -247,6 +247,10 @@ body {
 .animation-area .contact .tmp:hover a {
 	opacity: 1;
 	transform: translateX(0);
+}
+
+.animation-area .contact .tmp a:hover {
+	color: #ccc;
 }
 
 .animation-area .contact .tmp a:nth-of-type(1) {

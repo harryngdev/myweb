@@ -58,3 +58,23 @@
 		z-index: 1;
 	}
 }
+
+@media screen and (max-width: 450px) {
+	.text1 {
+		font-size: 75px;	
+	}	
+
+	.text2 {
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.text1 {
+		font-size: 65px;	
+	}	
+
+	.text2 {
+		font-size: 20px;
+	}	
+}
