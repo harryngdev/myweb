@@ -1,3 +1,20 @@
+:root {
+  --background: #fff;
+  --primary: #ffc87a;
+  --text-color: #1a2b5f;
+}
+
+[data-theme="dark"] {
+  --background: #1C2340;
+  --primary: #ffc87a;
+  --text-color: #fff;
+}
+
+@font-face {
+  font-family: sign;
+  src: url("../font/TheScientist.ttf");
+}
+
 html {
   font-size: 62.5%;
 }
@@ -24,6 +41,7 @@ img {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
 }
 
 .wrapper {
@@ -41,7 +59,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: white;
+  background: var(--background);
   z-index: 3;
   width: 100%;
   padding: 0 13rem;
@@ -86,7 +104,7 @@ body {
 .header__menu-link {
   font-size: 1.6rem;
   font-weight: 400;
-  color: #1a2b5f;
+  color: var(--text-color);
   -webkit-transition: color .25s linear;
   transition: color .25s linear;
 }
@@ -102,7 +120,7 @@ body {
 .toggle {
   cursor: pointer;
   position: fixed;
-  top: 0;
+  top: 42px;
   right: 0;
   width: 4rem;
   height: 4rem;
@@ -112,7 +130,7 @@ body {
 
 .toggle.active:before {
   content: '\f00d';
-  color: #1a2b5f;
+  color: var(--text-color);
 }
 
 .toggle:before {
@@ -144,32 +162,32 @@ body {
 
 .category__img1 {
   background-image: url("../img/6.jpg");
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .category__img2 {
   background-image: url("../img/2.jpg");
-  min-height: 400px;
+  height: 400px;
 }
 
 .category__img3 {
   background-image: url("../img/3.jpg");
-  min-height: 400px;
+  height: 400px;
 }
 
 .category__img4 {
   background-image: url("../img/4.jpg");
-  min-height: 400px;
+  height: 400px;
 }
 
 .category__img5 {
   background-image: url("../img/5.jpg");
-  min-height: 400px;
+  height: 400px;
 }
 
 .category__img6 {
   background-image: url("../img/1.jpg");
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .category__content {
@@ -184,7 +202,7 @@ body {
 }
 
 .category__content-desc {
-  color: #1a2b5f;
+  color: var(--text-color);
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -208,12 +226,127 @@ body {
   color: #ffc87a;
 }
 
+.category__social {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+}
+
+.category__social a {
+  text-align: center;
+  color: #1a2b5f;
+  font-size: 4rem;
+  margin: 1rem 1.5rem;
+  display: inline-block;
+}
+
+.category__social h2 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  color: #1a2b5f;
+}
+
+.category__social p {
+  color: #1a2b5f;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.category__sign {
+  position: absolute;
+  bottom: 20%;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.8rem;
+  font-family: sign;
+  color: #1a2b5f;
+  width: 100%;
+  text-align: center;
+}
+
+.category__footer {
+  position: absolute;
+  bottom: 5%;
+  color: #1a2b5f;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
 .btn {
   position: relative;
   width: 100%;
   height: 10rem;
   margin-top: -10rem;
   z-index: 0;
+}
+
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 10px;
+  right: 18px;
+  z-index: 1000;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #999;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #151935;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 ::-webkit-scrollbar {
@@ -261,6 +394,26 @@ body {
     text-align: center;
     padding: 4rem 0;
     border-bottom: 1px solid silver;
+  }
+  .category__social h2 {
+    font-size: 3rem;
+  }
+  .category__social a {
+    font-size: 3rem;
+  }
+  .category__social p {
+    font-size: 1.5rem;
+  }
+  .category__sign {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .category__sign {
+    font-size: 3.5rem;
+    letter-spacing: 0.3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
