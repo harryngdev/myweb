@@ -3,20 +3,19 @@ $text-color: #1a2b5f;
 $text-gray: #c6cad7;
 
 :root {
-    --background: #fff;
+    --background: #f7f9fb;
+    --header: #fff;
     --primary: #ffc87a;
     --text-color: #1a2b5f;
+    --shadow: black;
 }
 
 [data-theme="dark"] {
     --background: #1C2340;
+    --header: #151935;
     --primary: #ffc87a;
     --text-color: #fff;
-}
-
-@font-face {
-    font-family: sign;
-    src: url('../font/TheScientist.ttf');
+    --shadow: #fff;
 }
 
 @mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
@@ -70,7 +69,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--background);
+    background: var(--header);
     z-index: 3;
     width: 100%;
     padding: 0 13rem;
@@ -155,155 +154,101 @@ body {
     }
 }
 
-.category {
-    position: relative;
-    z-index: 1;
-    &__img1, 
-    &__img2, 
-    &__img3, 
-    &__img4, 
-    &__img5, 
-    &__img6 {
-        position: relative;
-        opacity: .7;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        z-index: 2;
-    }
-    &__img1 {
-        background-image: url('../img/6.jpg');
-        height: 100vh;
-    }
-    &__img2 {
-        background-image: url('../img/2.jpg');
-        height: 400px;
-    }
-    &__img3 {
-        background-image: url('../img/3.jpg');
-        height: 400px;
-    }
-    &__img4 {
-        background-image: url('../img/4.jpg');
-        height: 400px;
-    }
-    &__img5 {
-        background-image: url('../img/5.jpg');
-        height: 400px;
-    }
-    &__img6 {
-        background-image: url('../img/1.jpg');
-        height: 100vh;
-    }
-    &__link {
-        display: inline-block;
-        height: 3.5rem;
-        width: 3.5rem;
-        text-align: center;
-        line-height: 3.5rem;
-        font-size: 2rem;
-        color: var(--text-color);
-        border: 2px solid currentColor;
-        border-radius: 50%;
-        background-color: transparent;
-        transition: color .25s linear, border .25s linear;
-        &:hover,
-        &:hover ~ .category__click {
-            color: $primary-color;
-        }
-    }
-    &__click {
-        padding-top: 0.5rem;
-        color: var(--text-color);
-        font-weight: 300;
-        font-size: 1.2rem;
-        transition: color .25s linear;
-    }
-    &__content {
-        text-align: center;
-        &-info {
-            padding-top: 4rem;
-            padding-bottom: 2rem;
-            color: $primary-color;
-            font-weight: 600;
-            font-size: 3rem;
-        }
-        &-desc {
-            color: var(--text-color);
-            font-weight: 300;
-            font-size: 1.5rem;
-            line-height: 2rem;
-            padding-bottom: 4rem;
-            padding-top: 2rem;
-        }
+:root {
+    --spacing: 2rem;
+}
+
+.content {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    &__inner {
     }
     &__title {
-        position: absolute;
-        top: 50%;
-        font-size: 5rem;
-        font-weight: 700;
-        letter-spacing: 0.8rem;
-        text-transform: uppercase;
-        color: $text-color;
-        width: 100%;
         text-align: center;
-        p {
-            display: inline-block;
+        h1 {
+            font-size: 5rem;
+            font-weight: 700;
             color: $primary-color;
-        }
-    }
-    &__social {
-        position: absolute;
-        top: 30%;
-        width: 100%;
-        text-align: center;
-        a {
-            text-align: center;
-            color: $text-color;
-            font-size: 4rem;
-            margin: 1rem 1.5rem;
-            display: inline-block;
-        }
-        h2 {
-            font-size: 4.5rem;
-            font-weight: 600;
-            letter-spacing: 0.3rem;
-            color: $text-color;
+            padding-top: 5rem;
         }
         p {
-            color: $text-color;
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text-color);
+            padding-top: 0.5rem;
+            padding-bottom: 4rem;
         }
     }
-    &__sign {
-        position: absolute;
-        bottom: 20%;
-        font-size: 5rem;
-        font-weight: 700;
-        letter-spacing: 0.8rem;
-        font-family: sign;
-        color: $text-color;
-        width: 100%;
-        text-align: center;
+    &__list {
+        @include flex(stretch, flex-start, wrap);
+        margin: 0 calc(var(--spacing) * (-1));
     }
-    &__footer {
-        position: absolute;
-        bottom: 5%;
-        color: $text-color;
-        width: 100%;
-        text-align: center;
-        font-weight: 300;
-        font-size: 1.2rem;
+    &__item {
+        margin: 2rem var(--spacing);
+        width: calc(25% - var(--spacing) * 2);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 5px 15px -5px var(--shadow);
+        img {
+            transition: .25s linear;
+        }
+        &--desc {
+            position: absolute;
+            bottom: -13%;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(45deg, 
+                rgba(21, 25, 53, 1) 0%, 
+                rgba(28, 35, 64, 0.4) 100%);
+            transition: all .5s;
+            h3 {
+                font-size: 3rem;
+                font-weight: 400;
+                color: $primary-color;
+                padding-top: 0.7rem;
+            }
+            span {
+                font-size: 2rem;
+                font-weight: 400;
+                color: $text-gray;
+                display: block;
+                padding-top: 0.5rem;
+                padding-bottom: 1rem;
+            }
+            p {
+                font-size: 1.7rem;
+                font-weight: 300;
+                color: $text-gray;
+                a {
+                    font-size: 1.5rem;
+                    display: inline-block;
+                    color: $text-gray;
+                    transition: color .25s linear;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+            &:hover {
+                bottom: 0;
+            }
+        }
     }
 }
 
 .btn {
-    position: relative;
-    width: 100%;
-    height: 10rem;
-    margin-top: -10rem;
-    z-index: 0;
+    border: 1px solid currentColor;
+    border-radius: 0.8rem;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $text-gray;
+    padding: 0.3rem 0.5rem;
+    margin: 1rem 0;
+    transition: color .25s linear, border .25s linear;
+    &:hover {
+        color: $primary-color;
+    }
 }
 
 .theme-switch-wrapper {
@@ -349,7 +294,7 @@ body {
 }
 
 input:checked + .slider {
-    background-color: #151935;
+    background-color: #1C2340;
 }
 
 input:checked + .slider:before {
@@ -378,6 +323,14 @@ input:checked + .slider:before {
                         margin-right: 10rem;
                     }
                 }    
+            }
+        }
+    }
+    .content {
+        &__item {
+            width: calc(33.33% - var(--spacing) * 2);
+            &--desc {
+                bottom: -15%;
             }
         }
     }
@@ -414,30 +367,24 @@ input:checked + .slider:before {
             } 
         }
     }
-    .category {
-        &__social {
-            h2 {
-                font-size: 3rem;
-            }
-            a {
-                font-size: 3rem;
+    .content {
+        &__title {
+            padding: 0 1rem;
+            h1 {
+                padding-top: 0;
             }
             p {
-                font-size: 1.5rem;
+                padding-bottom: 2rem;
             }
         }
-        &__sign {
-            font-size: 4rem;
-            letter-spacing: 0.5rem;
+        &__list {
+            margin: 0;
         }
-    }
-}
-
-@media screen and (max-width: 479px) {
-    .category {
-        &__sign {
-            font-size: 3.5rem;
-            letter-spacing: 0.3rem;
+        &__item {
+            width: 100%;
+            &--desc {
+                bottom: -16%;
+            }
         }
     }
 }
