@@ -2,6 +2,26 @@ $primary-color: #ffc87a;
 $text-color: #1a2b5f;
 $text-gray: #b1b2b2;
 
+:root {
+    --background: #edf4fa;
+    --container: #fff;
+    --primary: #ffc87a;
+    --text-color: #1a2b5f;
+    --contact: #1a2b5f;
+    --social: #fff;
+    --header: #f1f2f3;
+}
+
+[data-theme="dark"] {
+    --background: #151935;
+    --container: #1C2340;
+    --primary: #ffc87a;
+    --text-color: #fff;
+    --contact: #ffc87a;
+    --social: #f1f2f3;
+    --header: #151935;
+}
+
 @mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
     display: flex;
     align-items: $align;
@@ -39,11 +59,11 @@ img {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #edf4fa;
+    background-color: var(--background);
 }
 
 .wrapper {
-    width: 1440px;
+    max-width: 1440px;
     margin: 5rem auto;
 }
 
@@ -51,7 +71,7 @@ body {
     max-width: 1210px;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    background-color: #fff;
+    background-color: var(--container);
     margin: 0 auto;
     border-radius: 2rem;
     overflow: hidden;
@@ -73,7 +93,7 @@ body {
             }
             &--link {
                 display: inline-block;
-                color: $text-color;
+                color: var(--text-color);
                 font-size: 1.4rem;
                 font-weight: 400;
                 transition: color .25s linear;
@@ -98,7 +118,7 @@ body {
             p {
                 font-size: 3.5rem;
                 font-weight: 600;
-                color: $text-color;
+                color: var(--text-color);
             }
         }
         &--feature {
@@ -109,10 +129,10 @@ body {
             margin-bottom: 3rem;
             width: calc(50% - 3rem);
             @include flex(center);
-            color: $text-color;
+            color: var(--text-color);
             &--icon {
                 width: 10rem;
-                border: 2px solid #fff;
+                border: 2px solid var(--container);
                 border-radius: 50%;
                 margin-right: 2rem;
             }
@@ -175,7 +195,7 @@ body {
     }
     p {
         font-size: 3rem;
-        color: $text-color;
+        color: var(--text-color);
         font-weight: 600;
     }
     span {
@@ -186,6 +206,7 @@ body {
 
 .contact {
     &__background {
+        overflow: hidden;
         height: 20rem;
         background-image: url('../img/1.jpg');
         background-repeat: no-repeat;
@@ -195,6 +216,16 @@ body {
         z-index: 1;
         position: relative;
         box-shadow: 0px -17px 20px -6px #fff inset;
+        &:after {
+            content: "";
+            background-image: linear-gradient(-90deg, #fff, white);
+            height: 3rem;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            opacity: 0.5;
+            box-shadow: 0px -14px 30px 20px #fff;
+        }
     }
     &__header {
         padding: 0 2rem;
@@ -212,7 +243,7 @@ body {
             margin-top: 1rem;
             font-size: 2rem;
             font-weight: 700;
-            color: $text-color;
+            color: var(--contact);
         }
         p {
             font-size: 1.4rem;
@@ -227,7 +258,7 @@ body {
             h3 {
                 font-size: 1.5rem;
                 font-weight: 600;
-                color: $text-color;
+                color: var(--contact);
                 margin-bottom: 0.5rem;
             }
             i {
@@ -246,7 +277,7 @@ body {
             h3 {
                 font-size: 1.5rem;
                 font-weight: 600;
-                color: $text-color;
+                color: var(--contact);
                 margin-bottom: 0.5rem;
             }
             i {
@@ -260,8 +291,12 @@ body {
             }
         }
         &--social {
-            margin-top: 15rem;
             text-align: center;
+            background-color: var(--social);
+            width: fit-content;
+            padding: 1rem;
+            margin: 15rem auto 0 auto;
+            border-radius: 4rem;
             a {
                 display: inline-block;
                 margin-left: 1rem;
@@ -281,13 +316,17 @@ body {
 
 .job {
     width: fit-content;
-    background-color: #F1F2F3;
+    background-color: #f1f2f3;
     margin: 3rem auto;
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 4rem;
     color: $text-color;
     font-weight: 400;
+    transition: color .25s linear;
+    &:hover {
+        color: $primary-color;
+    }
 }
 
 .hidden {
@@ -323,4 +362,147 @@ body {
     font-weight: 600;
     padding-bottom: 0.2rem;
     border-bottom: 2px solid $primary-color;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 18px;
+    z-index: 1000;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #999;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #1C2340;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* 1440 1366 1280 1024 768 480 320 */
+@media screen and (max-width: 1439px) {
+    .wrapper {
+        margin: 0;
+    }
+    .container {
+        border-radius: 0;
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        &__footer {
+            margin-top: 5rem;
+            &--language {
+                width: fit-content;
+                margin: 0 auto;
+                text-align: center;
+                p {
+                    padding: 0;
+                }
+            }
+            &--location {
+                width: fit-content;
+                margin: 3rem auto 0 auto;
+                text-align: center;
+                p {
+                    padding: 0;
+                }
+            }
+            &--social {
+                margin: 5rem auto;
+            }
+        }
+    }
+    input:checked + .slider {
+        background-color: #151935;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        padding: 0;
+        &__header {
+            position: fixed;
+            background-color: var(--header);
+            width: 100%;
+            top: 0;
+            flex-wrap: wrap;
+            z-index: 500;
+            &-menu {
+                width: 100%;
+                margin: 1.5rem 1rem;
+                &--list {
+                    justify-content: space-between;
+                }
+                &--item {
+                    margin: 0;
+                }
+            }
+        }
+        &__main {            
+            padding: 8rem 0 0 0;
+            &-item {
+                width: 100%;
+                padding: 0 1rem;
+            }
+            &--skill {
+                flex-wrap: wrap;
+                &-item {
+                    width: 100%;
+                    margin-bottom: 3rem;
+                    h2 {
+                        text-align: center;
+                    }
+                    &-row {
+                        margin: 1rem 3rem;
+                    }
+                }
+            }
+        }
+    }
+    input:checked + .slider {
+        background-color: #1C2340;
+    }
 }
