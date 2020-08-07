@@ -352,7 +352,7 @@ input:checked + .slider:before {
   }
   .toggle {
     display: initial;
-    z-index: 9999;
+    z-index: 1000;
   }
   .header__menu--unres {
     display: none;
@@ -373,5 +373,9 @@ input:checked + .slider:before {
         -ms-flex: 100%;
             flex: 100%;
   }
+}
+
+.mfp-wrap {
+  z-index: 9000;
 }
 /*# sourceMappingURL=page.css.map */

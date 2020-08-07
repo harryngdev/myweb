@@ -299,7 +299,7 @@ input:checked + .slider:before {
     }
     .toggle {
         display: initial;
-        z-index: 9999;
+        z-index: 1000;
     }
     .header {
         &__menu {
@@ -328,4 +328,8 @@ input:checked + .slider:before {
             }
         }
     }
+}
+
+.mfp-wrap {
+    z-index: 9000;
 }
