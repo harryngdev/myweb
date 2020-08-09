@@ -10,6 +10,8 @@ $text-gray: #b1b2b2;
     --contact: #1a2b5f;
     --social: #fff;
     --header: #f1f2f3;
+    --shadow: #ccc;
+    --banner: #ccc;
 }
 
 [data-theme="dark"] {
@@ -20,6 +22,8 @@ $text-gray: #b1b2b2;
     --contact: #ffc87a;
     --social: #f7f8f9;
     --header: #151935;
+    --shadow: #ffc87a;
+    --banner: #1C2340;
 }
 
 @mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
@@ -103,7 +107,7 @@ body {
             }
         }
     }
-    &__main {
+    &__project {
         padding: 0 2rem;
         margin-top: 5rem;
         &--title {
@@ -121,53 +125,84 @@ body {
                 color: var(--text-color);
             }
         }
-        &--category {
-            border-left: 2px solid $text-gray;
-            margin-left: 10rem;
+        &--list {
             margin-top: 3rem;
-            @include flex(flex-start, flex-start, wrap);
+            @include flex(stretch, space-between, wrap);
         }
-        &--feature {
-            width: 100%;
-            margin: 3rem 0;
-            padding-right: 20rem;
-            @include flex(center, space-between);
-            &-title {
-                font-size: 2rem;
-                font-weight: 500;
+        &--item {
+            width: calc(50% - 2rem);
+            margin: 2rem 0;
+            border-radius: 3rem;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            position: relative;
+            box-shadow: 0 15px 25px -5px var(--shadow);
+            &:hover > .project__desc {
+                display: initial;
+            }
+        }
+    }
+    &__banner {
+        border: 1px solid #fff;
+        width: fit-content;
+        margin: 5rem auto 0 auto;
+        background-color: var(--social);
+        text-align: center;
+        padding: 2rem;
+        box-shadow: 0 15px 25px -5px var(--banner);
+        p {
+            color: $text-color;
+            font-size: 1.5rem;
+            font-weight: 500;
+            span {
                 color: $primary-color;
-                text-align: center;
-                padding: 1.5rem 0;
-                background-color: var(--container);
             }
-            &-info {
-                width: 50%;
+            margin-bottom: 1rem;
+        }
+        a {
+            color: $text-gray;
+            font-size: 2rem;
+            font-weight: 400;
+            transition: color .25s linear;
+            &:hover {
+                color: $primary-color;
             }
-            &-item {
-                background-color: #f7f8f9;
-                border-radius: 2rem;
-                padding: 2rem;
-                margin: 2rem 0;
-                span {
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                    color: $text-color;
-                }
-                p {
-                    margin-top: 1rem;
-                    font-size: 1.3rem;
-                    font-weight: 300;
-                    color: $text-color;
-                    padding-left: 1.5rem;
-                }
-                h6 {
-                    margin-top: 0.7rem;
-                    font-size: 1.2rem;
-                    font-weight: 400;
-                    color: $text-gray;
-                    padding-left: 1.5rem;
-                }
-            }
+        }
+    }
+}
+
+.background_1 {
+    background-image: url('../img/project/project1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.background_2 {
+    background-image: url('../img/project/project2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.project__desc {
+    background-color: #ffffff99;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    p {
+        color: $text-color;
+        font-size: 4rem;
+        font-weight: 600;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        i {
+            margin-left: 2rem;
         }
     }
 }
@@ -379,14 +414,6 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-.m_l-1 {
-    margin-left: -3rem;
-}
-
-.m_l-2 {
-    margin-left: -7rem;
-}
-
 /* 1440 1366 1280 1024 768 480 320 */
 @media screen and (max-width: 1439px) {
     .wrapper {
@@ -428,46 +455,11 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 1023px) {
     .content {
-        &__main {
-            &--category {
-                border: 0;
-                margin-left: 0;
-                padding: 0 15rem;
-            }
-            &--feature {
-                padding-right: 0;
-                flex-wrap: wrap;
-                justify-content: center;
-                &-title {
-                    width: fit-content;
-                    border-top: 2px solid $text-gray;
-                    padding: 0 10rem;
-                    h2 {
-                        margin-top: -1rem;
-                        background-color: var(--container);
-                        padding: 0 2rem;
-                    }
-                }
-                &-info {
-                    width: 100%;
-                    text-align: center;
-                }
-                &-item {
-                    p {
-                        padding-left: 0;
-                    }
-                    h6 {
-                        padding-left: 0;
-                    }
-                }
+        &__project {
+            &--item {
+                height: 350px;
             }
         }
-    }
-    .m_l-1 {
-        margin-left: 0;
-    }
-    .m_l-2 {
-        margin-left: 0;
     }
 }
 
@@ -492,21 +484,11 @@ input:checked + .slider:before {
                 }
             }
         }
-        &__main {
-            padding: 8rem 0 0 0;
-            &--category {
-                padding: 0;
-            }
-            &--feature {
-                &-title {
-                    width: 100%;
-                    h2 {
-                        padding: 0 1rem;
-                    }
-                }
-                &-info {
-                    margin: 0 4rem;
-                }
+        &__project {
+            padding-top: 8rem;
+            &--item {
+                width: 100%;
+                height: 320px;
             }
         }
     }
@@ -517,17 +499,8 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 374px) {
     .content {
-        &__main {
-            &--feature {
-                &-title {
-                    h2 {
-                        padding: 0;
-                    }
-                }
-                &-info {
-                    margin: 0 3rem;
-                }
-            }
+        &__banner {
+            padding: 2rem 0;
         }
     }
 }
