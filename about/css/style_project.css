@@ -229,6 +229,13 @@ body {
   background-position: center;
 }
 
+.background_3 {
+  background-image: url("../img/project/project3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .project__desc {
   background-color: #ffffff99;
   height: 100%;
