@@ -206,22 +206,22 @@ body {
 }
 
 .category__img2 {
-  background-image: url("../img/2.jpg");
+  background-image: url("../img/albums.jpg");
   height: 400px;
 }
 
 .category__img3 {
-  background-image: url("../img/3.jpg");
+  background-image: url("../img/blog.jpg");
   height: 400px;
 }
 
 .category__img4 {
-  background-image: url("../img/4.jpg");
+  background-image: url("../img/music.jpg");
   height: 400px;
 }
 
 .category__img5 {
-  background-image: url("../img/5.jpg");
+  background-image: url("../img/game.gif");
   height: 400px;
 }
 
