@@ -849,6 +849,7 @@ body {
   position: absolute;
   left: -12px;
   top: 0;
+  padding: 1rem 0;
 }
 
 .content .experience__list-exp > .experience__item:after {
@@ -860,6 +861,7 @@ body {
   position: absolute;
   left: -12px;
   top: 0;
+  padding: 1rem 0;
 }
 
 .content .experience__item {

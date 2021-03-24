@@ -1,4 +1,4 @@
-### Hi there, this is my [website][website] 👋
+<!-- ### Hi there, this is my [website][website] 👋
 
 ---  
 - The web uses pure code **HTML/CSS/JavaScript**.  
@@ -8,4 +8,4 @@
 
 ---
 
-[website]: https://nvanha.github.io/myweb
+[website]: https://nvanha.github.io/myweb -->

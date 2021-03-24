@@ -40,13 +40,13 @@ $(window).on('load', function() {
     /*=========================================================================
      Isotope
      =========================================================================*/
-    $('.portfolio-filter').on( 'click', 'li', function() {
+    $('.works__nav').on( 'click', 'li', function() {
         var filterValue = $(this).attr('data-filter');
         $container.isotope({ filter: filterValue });
     });
 
     // change is-checked class on buttons
-    $('.portfolio-filter').each( function( i, buttonGroup ) {
+    $('.works__nav').each( function( i, buttonGroup ) {
         var $buttonGroup = $( buttonGroup );
         $buttonGroup.on( 'click', 'li', function() {
             $buttonGroup.find('.current').removeClass('current');
@@ -54,18 +54,18 @@ $(window).on('load', function() {
         });
     });
 
-    var $container = $('.portfolio-wrapper');
-    $container.imagesLoaded( function() {
-      $('.portfolio-wrapper').isotope({
-          // options
-          itemSelector: '[class*="col-"]',
-          percentPosition: true,
-          masonry: {
-              // use element for option
-              columnWidth: '[class*="col-"]'
-          }
-      });
-    });
+    var $container = $('.works__list');
+    // $container.imagesLoaded( function() {
+    //   $('.works__list').isotope({
+    //       // options
+    //       itemSelector: '[class*="col-"]',
+    //       percentPosition: true,
+    //       masonry: {
+    //           // use element for option
+    //           columnWidth: '[class*="col-"]'
+    //       }
+    //   });
+    // });
 
     var bolbyPopup = function(){
       /*=========================================================================
