@@ -9,6 +9,7 @@ $pink: #F97B8B;
 $black: #181616;
 $light: #F8F9Fa;
 $icon-fact: #DEDEEA;
+$text-white-popup: #454360;
 
 @mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
     display: flex;
@@ -260,6 +261,11 @@ body {
                     }
                     &:hover {
                         color: $primary-text;
+                    }
+                    &.nav-link {
+                        &.active {
+                            color: $primary-text;
+                        }
                     }
                 }
             }
@@ -669,7 +675,7 @@ body {
             }
             p {
                 margin-top: 2rem;
-                font-weight: 500;
+                font-weight: 400;
                 font-size: 1.5rem;
                 line-height: 2.5rem;
             }
@@ -697,18 +703,13 @@ body {
             }
         }
         &__list {
-            margin: 4rem 9.1rem 0 9.1rem;
+            margin: 1rem 9.1rem 0 9.1rem;
             @include flex(stretch, flex-start, wrap);
         }
         &__item {
             margin: 0 2rem;
             width: calc(33.33% - 4rem);
             margin-top: 3rem;
-            &:nth-child(1),
-            &:nth-child(2),
-            &:nth-child(3) {
-                margin-top: 0rem;
-            }
             overflow: hidden;
             border-radius: 2rem;
             box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
@@ -792,6 +793,20 @@ body {
             // &:nth-child(1):hover > #psd {
             //     color: $pink;
             // }
+        }
+        .load-more {
+            margin-top: 3.5rem;
+            text-align: center;
+            .button {
+                i {
+                    margin-right: 1rem;
+                    display: none;
+                }
+                // margin-top: 2rem;
+            }
+            .portfolio-pagination {
+                display: none;
+            }
         }
     }
     .contact {
@@ -894,6 +909,127 @@ body {
     }
     &:hover {
         background-color: $red;
+    }
+}
+
+/* ========================================== Fade-zoom animation for first dialog ========================================== */
+.mfp-zoom-in {
+    .mfp-with-anim {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0.8);
+    }
+    &.mfp-bg {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+    &.mfp-ready {
+        .mfp-with-anim {
+            opacity: 1;
+            transform: scale(1);
+        }
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+    &.mfp-removing {
+        .mfp-with-anim {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        &.mfp-bg {
+            opacity: 0;
+        }
+    }
+}
+
+.my-mfp-zoom-in {
+    /* start state */
+    .zoom-anim-dialog {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0.8);
+    }
+    /* animate in */
+    &.mfp-ready {
+        .zoom-anim-dialog {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    /* animate out */
+    &.mfp-removing {
+        .zoom-anim-dialog {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+    }
+    /* Dark overlay, start state */
+    &.mfp-bg {
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+    }
+    /* animate in */
+    &.mfp-ready {
+        &.mfp-bg {
+            opacity: 0.8;
+        }
+    }
+    /* animate out */
+    &.mfp-removing {
+        &.mfp-bg {
+            opacity: 0;
+        }
+    }
+}
+
+/* Styles for dialog window */
+.white-popup {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: left;
+    max-width: 650px;
+    margin: 40px auto;
+    position: relative;
+    img {
+        border-radius: 25px;
+    }
+    h2 {
+        font-size: 3.6rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        color: $text-white-popup;
+    }
+    p {
+        color: $text-white-popup;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-top: 1.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 100%;
+            background-color: $primary-text;
+        }
+    }
+    .button {
+        margin-top: 2rem;
+    }
+}
+
+.mfp-close {
+    font-size: 40px;
+    opacity: 1;
+    &:hover {
+        opacity: 0.75;
     }
 }
 

@@ -301,6 +301,10 @@ body {
   color: #FFD15C;
 }
 
+.header-desktop-menu li a.nav-link.active {
+  color: #FFD15C;
+}
+
 .header-desktop-footer {
   margin-top: auto;
 }
@@ -885,7 +889,7 @@ body {
 
 .content .experience__item p {
   margin-top: 2rem;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
@@ -927,7 +931,7 @@ body {
 }
 
 .content .works__list {
-  margin: 4rem 9.1rem 0 9.1rem;
+  margin: 1rem 9.1rem 0 9.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -949,10 +953,6 @@ body {
   border-radius: 2rem;
   -webkit-box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
           box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
-}
-
-.content .works__item:nth-child(1), .content .works__item:nth-child(2), .content .works__item:nth-child(3) {
-  margin-top: 0rem;
 }
 
 .content .works__item-inner {
@@ -1045,6 +1045,20 @@ body {
 
 .content .works__item:hover .details > .more-button {
   opacity: 1;
+}
+
+.content .works .load-more {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.content .works .load-more .button i {
+  margin-right: 1rem;
+  display: none;
+}
+
+.content .works .load-more .portfolio-pagination {
+  display: none;
 }
 
 .content .contact__inner {
@@ -1198,6 +1212,141 @@ body {
 
 #return-to-top:hover {
   background-color: #FF4C60;
+}
+
+/* ========================================== Fade-zoom animation for first dialog ========================================== */
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.my-mfp-zoom-in {
+  /* start state */
+  /* animate in */
+  /* animate out */
+  /* Dark overlay, start state */
+  /* animate in */
+  /* animate out */
+}
+
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0;
+}
+
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/* Styles for dialog window */
+.white-popup {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: left;
+  max-width: 650px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.white-popup img {
+  border-radius: 25px;
+}
+
+.white-popup h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: #454360;
+}
+
+.white-popup p {
+  color: #454360;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.white-popup p:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  background-color: #FFD15C;
+}
+
+.white-popup .button {
+  margin-top: 2rem;
+}
+
+.mfp-close {
+  font-size: 40px;
+  opacity: 1;
+}
+
+.mfp-close:hover {
+  opacity: 0.75;
 }
 
 /* ========================================== ANIMATION ========================================== */

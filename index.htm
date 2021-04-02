@@ -51,16 +51,17 @@
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link 
-		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" 
 		rel="stylesheet"
 	/>
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/simple-line-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script>
+    <!-- <script>
         alert("Website is being updated !!!");
-    </script>
+    </script> -->
 </head>
 <body>
 <div id="preloader">
@@ -100,8 +101,8 @@
         </a>
     </div>
     <nav class="header-desktop-menu">
-        <ul>
-            <li><a href="#home"><i class="icon-home"></i>Home</a></li>
+        <ul class="vertical-menu scrollspy">
+            <li class="active"><a href="#home"><i class="icon-home"></i>Home</a></li>
             <li><a href="#about"><i class="icon-user-following"></i>About</a></li>
             <li><a href="#services"><i class="icon-briefcase"></i>Services</a></li>
             <li><a href="#experience"><i class="icon-graduation"></i>Experience</a></li>
@@ -316,7 +317,7 @@
         <div class="container">
             <h2 class="section-title wow fadeInUp">Recent Works</h2>
 
-            <ul class="works__nav wow faceInUp">
+            <ul class="works__nav wow fadeInUp">
                 <li class="current works__nav-item" data-filter="*">Everything</li>
                 <li class="works__nav-item" data-filter=".ui_design">UI Design</li>
                 <li class="works__nav-item" data-filter=".psd">PSD</li>
@@ -327,72 +328,8 @@
 
             <div class="works__list">
                 <!-- 454x560 -->
-                <div class="works__item ui_design psd">
-                    <a href="https://nvanha.github.io/psd_1/index.htm" target="_blank">
-                        <div class="works__item-inner">
-                            <div class="details">
-                                <span class="term">HTML, CSS, PSD</span>
-                                <h4 class="title">Convert PSD to HTML/CSS</h4>
-                                <span class="more-button"><i class="icon-link"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/1.png" alt="tmp" />
-                                <div class="mask"></div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="works__item sales_site">
-                    <a href="https://nvanha.github.io/xiaomi_sales_website_ver1/" target="_blank">
-                        <div class="works__item-inner">
-                            <div class="details">
-                                <span class="term">PHP, JavaScript</span>
-                                <h4 class="title">Xiaomi Sales Website Ver-1</h4>
-                                <span class="more-button"><i class="icon-link"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/2.png" alt="tmp" />
-                                <div class="mask"></div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="works__item sales_site">
-                    <a href="https://nvanha.github.io/xiaomi_sales_website_ver2/" target="_blank">
-                        <div class="works__item-inner">
-                            <div class="details">
-                                <span class="term">PHP, JavaScript</span>
-                                <h4 class="title">Xiaomi Sales Website Ver-2</h4>
-                                <span class="more-button"><i class="icon-link"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/3.png" alt="tmp" />
-                                <div class="mask"></div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="works__item validation">
-                    <a href="https://nvanha.github.io/form_validation/" target="_blank">
-                        <div class="works__item-inner">
-                            <div class="details">
-                                <span class="term">JavaScript</span>
-                                <h4 class="title">Form Validation</h4>
-                                <span class="more-button"><i class="icon-link"></i></span>
-                            </div>
-                            <div class="thumb">
-                                <img src="images/works/4.png" alt="tmp" />
-                                <div class="mask"></div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
                 <div class="works__item api">
-                    <a href="https://nvanha.github.io/facebook_google_api_login/" target="_blank">
+                    <a href="#small-dialog-5" class="work-content">
                         <div class="works__item-inner">
                             <div class="details">
                                 <span class="term">PHP, API</span>
@@ -405,10 +342,21 @@
                             </div>
                         </div>
                     </a>
+                    <div id="small-dialog-5" class="white-popup zoom-anim-dialog mfp-hide">
+                        <img src="images/works/5.png" alt="image" />
+                        <h2>Facebook/Google API | Login with Facebook/Google accounts in PHP</h2>
+                        <p>Facebook/Google API.</p>
+                        <p>Form login with Facebook/Google accounts in PHP.</p>
+                        <p>Clase redes Servidor HTTP con XAMPP.</p>
+                        <p>How to enable SSL (HTTPS protocol) with XAMPP in a local PHP project.</p>
+                        <div class="button">
+                            <a href="https://nvanha.github.io/facebook_google_api_login/" target="_blank" class="btn">View on Github</a>
+                        </div>
+                    </div>
                 </div>
-
+                
                 <div class="works__item api">
-                    <a href="https://nvanha.github.io/chat_web_application/" target="_blank">
+                    <a href="#small-dialog-6" class="work-content">
                         <div class="works__item-inner">
                             <div class="details">
                                 <span class="term">PHP, JavaScript, API</span>
@@ -421,7 +369,83 @@
                             </div>
                         </div>
                     </a>
+                    <div id="small-dialog-6" class="white-popup zoom-anim-dialog mfp-hide">
+                        <img src="images/works/6.png" alt="image" />
+                        <h2>Chat Web Application in PHP</h2>
+                        <p>The Sample PHP Chat App demonstrates the use of APIs for EnableX platform to carry out 1-to-1 RTC (Real Time Communication) Application.</p>
+                        <p>The main motivation behind this application is to demonstrate usage of APIs and allow developers to ramp up on app by hosting on their own devices instead of directly using servers.</p>
+                        <p>RTC Applications hosted on EnableX platform run natively on supported set of web browsers without any additional plugin downloads.</p>
+                        <p>This basic 1-to-1 Chat Application is developed using HTML, CSS, Bootstrap, JavaScript, jQuery, PHP and EnxRtc (The EnableX Web Toolkit).</p>
+                        <div class="button">
+                            <a href="https://nvanha.github.io/chat_web_application/" target="_blank" class="btn">View on Github</a>
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="works__item sales_site">
+                    <a href="#small-dialog-3" class="work-content">
+                        <div class="works__item-inner">
+                            <div class="details">
+                                <span class="term">PHP, JavaScript</span>
+                                <h4 class="title">Xiaomi Sales Website Ver-2</h4>
+                                <span class="more-button"><i class="icon-link"></i></span>
+                            </div>
+                            <div class="thumb">
+                                <img src="images/works/3.png" alt="tmp" />
+                                <div class="mask"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <div id="small-dialog-3" class="white-popup zoom-anim-dialog mfp-hide">
+                        <img src="images/works/3.png" alt="image" />
+                        <h2>Xiaomi Sales Website Version 2</h2>
+                        <p>This is a complete upgrade compared to Version 1.</p>
+                        <p>Database use Functions and Procedures.</p>
+                        <p>Site is built from HTML, CSS, JavaScript, MySql, PHP, not Framework.</p>
+                        <p>Not yet support English.</p>
+                        <p>Not yet Responsive Web.</p>
+                        <div class="button">
+                            <a href="https://nvanha.github.io/xiaomi_sales_website_ver2/" target="_blank" class="btn">View on Github</a>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="works__item validation">
+                    <a href="#small-dialog-4" class="work-content">
+                        <div class="works__item-inner">
+                            <div class="details">
+                                <span class="term">JavaScript</span>
+                                <h4 class="title">Form Validation</h4>
+                                <span class="more-button"><i class="icon-link"></i></span>
+                            </div>
+                            <div class="thumb">
+                                <img src="images/works/4.png" alt="tmp" />
+                                <div class="mask"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <div id="small-dialog-4" class="white-popup zoom-anim-dialog mfp-hide">
+                        <img src="images/works/4.png" alt="image" />
+                        <h2>Form Validation in JavaScript</h2>
+                        <p>Data validation is the process of ensuring that user input is clean, correct, and useful.</p>
+                        <p>Has the user filled in all required fields?</p>
+                        <p>Has the user entered a valid date?</p>
+                        <p>Has the user entered text in a numeric field?</p>
+                        <div class="button">
+                            <a href="https://nvanha.github.io/form_validation/" target="_blank" class="btn">View on Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <div class="button">
+                    <a href="javascript:" class="btn"><i class="fa fa-spinner"></i>Load more</a>
+                </div>
+                <ul class="portfolio-pagination">
+                    <li class="list-inline-item">1</li>
+                    <li class="list-inline-item"><a href="works-2.htm">2</a></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -484,8 +508,6 @@
 <script src="js/infinite-scroll.min.js"></script>
 <script src="js/imagesloaded.pkgd.min.js"></script>
 <script src="js/slick.min.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/validator.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/morphext.min.js"></script>
 <script src="js/parallax.min.js"></script>
