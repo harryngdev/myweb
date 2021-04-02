@@ -999,6 +999,7 @@ body {
         font-size: 3.6rem;
         font-weight: 700;
         margin-top: 2rem;
+        line-height: 5.7rem;
         color: $text-white-popup;
     }
     p {
@@ -1008,6 +1009,7 @@ body {
         margin-top: 1.5rem;
         position: relative;
         padding-left: 1.5rem;
+        line-height: 2rem;
         &:before {
             content: "";
             position: absolute;
