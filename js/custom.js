@@ -174,6 +174,7 @@ $(window).on('load', function() {
     // display loading icon
     $( '.load-more .button .btn i' ).css('display', 'inline-block');
     $( '.load-more .button .btn i' ).addClass('fa-spin');
+    $( '#works .container .works__nav li' ).removeClass('none-el');
 
     $(document).ajaxStop(function () {
       setTimeout(function(){

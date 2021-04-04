@@ -84,6 +84,10 @@ body {
           animation-iteration-count: 1;
 }
 
+.none-el {
+  display: none;
+}
+
 .morphext > .animated {
   display: inline-block;
 }
