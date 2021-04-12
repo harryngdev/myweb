@@ -59,9 +59,9 @@
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/simple-line-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script>
+    <!-- <script>
         alert("Website is being updated !!!");
-    </script>
+    </script> -->
 </head>
 <body>
 <div id="preloader">
@@ -93,6 +93,12 @@
         </svg>
     </div>
 </div>
+
+<header class="header-mobile">
+    <div class="menu-icon">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+</header>
 
 <header class="header-desktop" >
     <div class="header-desktop-logo">
@@ -316,6 +322,17 @@
     <section id="works" class="works">
         <div class="container">
             <h2 class="section-title wow fadeInUp">Recent Works</h2>
+
+            <div class="pf-filter-wrapper">
+                <select class="portfolio-filter-mobile">
+                    <option value="*">Everything</option>
+                    <option value=".ui_design">UI Design</option>
+                    <option value=".application">Application</option>
+                    <option value=".form_validation">Form Validation</option>
+                    <option value=".sales_site">Sales Site</option>
+                    <option value=".api">API</option>
+                </select>
+            </div>
 
             <ul class="works__nav wow fadeInUp">
                 <li class="current works__nav-item" data-filter="*">Everything</li>

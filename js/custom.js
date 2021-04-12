@@ -184,10 +184,47 @@ $(window).on('load', function() {
     });
     return false;
   });
+
+  $('.portfolio-filter-mobile').on( 'change', function() {
+    // get filter value from option value
+    var filterValue = this.value;
+    // use filterFn if matches value
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $container.isotope({ filter: filterValue });
+  });
+
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function() {
+      var number = $(this).find('.number').text();
+      return parseInt( number, 10 ) > 50;
+    },
+    // show if name ends with -ium
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match( /ium$/ );
+    }
+  };
 });
 
 $(function(){
   "use strict";
+  
+  /*=============== Mobile Menu Toggle ===============*/
+  $('.menu-icon i').on( 'click', function() {
+    $('header.header-desktop, main.content, header.header-mobile').toggleClass('open');
+    $('.content .about, .content .services, .content .experience, .content .works, .content .contact, footer.footer').toggleClass('none-el');
+  });
+
+  $('main.content').on( 'click', function() {
+    $('header.header-desktop, main.content, footer.footer, header.header-mobile').removeClass('open');
+    $('.content .about, .content .services, .content .experience, .content .works, .content .contact, footer.footer').removeClass('none-el');
+  });
+
+  $('.vertical-menu li a').on( 'click', function() {
+    $('header.header-desktop, main.content, footer.footer, header.header-mobile').removeClass('open');
+    $('.content .about, .content .services, .content .experience, .content .works, .content .contact, footer.footer').removeClass('none-el');
+  });
 
   /*=============== One Page Scroll with jQuery ===============*/
   $('a[href^="#"]:not([href="#"]').on('click', function(event) {
