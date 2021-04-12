@@ -10,6 +10,21 @@ $black: #181616;
 $light: #F8F9Fa;
 $icon-fact: #DEDEEA;
 $text-white-popup: #454360;
+$green: #44D4B4;
+
+:root {
+    --background: #F9F9FF;
+    --text_title: #5E5C7F;
+    --text: #5E5C7F;
+    --text_hover: #181616;
+}
+
+[data-theme="dark"] {
+    --background: #353353;
+    --text_title: #FFFFFF;
+    --text: #DEDEEA;
+    --text_hover: #FFD15C;
+}
 
 @mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
     display: flex;
@@ -47,7 +62,7 @@ img {
 }
 
 body {
-    background-color: #F9F9FF;
+    background-color: var(--background);
     color: $text-color-b;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
@@ -88,7 +103,7 @@ body {
     overflow: hidden;
     &-bar {
         height: 100%;
-        background-color: $blue;
+        background-color: $primary-text;
         opacity: 0.5;
         animation-name: line;
         animation-duration: 1s;
@@ -390,6 +405,7 @@ body {
         position: relative;
         font-weight: 700;
         padding: 0;
+        color: var(--text_title);
         &:before {
             content: "";
             background-image: url(../images/icons/dots-bg.svg);
@@ -422,6 +438,9 @@ body {
                 color: $text-color-w;
                 font-size: 4rem;
                 font-weight: 700;
+                span {
+                    color: $pink;
+                }
             }
             p {
                 margin-top: 2rem;
@@ -571,7 +590,7 @@ body {
                     color: $blue;
                 }
                 &:last-child:hover > span {
-                    color: $primary-background;
+                    color: $green;
                 }
                 span {
                     font-size: 4rem;
@@ -583,11 +602,13 @@ body {
                     h3 {
                         font-size: 4rem;
                         font-weight: 700;
+                        color: var(--text);
                     }
                     p {
                         margin-top: 0.5rem;
                         font-size: 1.6rem;
                         font-weight: 500;
+                        color: var(--text);
                     }
                 }
             }
@@ -653,11 +674,12 @@ body {
             text-align: center;
             font-size: 1.5rem;
             font-weight: 400;
+            color: var(--text);
             a {
                 color: $red;
                 transition: all 0.2s linear;
                 &:hover {
-                    color: $black;
+                    color: var(--text_hover);
                 }
             }
         }
@@ -756,6 +778,7 @@ body {
                 font-weight: 700;
                 margin-right: 3rem;
                 transition: all 0.25s linear;
+                color: var(--text);
                 &:last-child {
                     margin-right: 0;
                 }
@@ -886,17 +909,19 @@ body {
             h3 {
                 font-size: 2.3rem;
                 font-weight: 700;
+                color: var(--text);
             }
             p {
                 margin-top: 1rem;
                 font-size: 1.5rem;
                 font-weight: 400;
                 line-height: 2rem;
+                color: var(--text);
                 a {
                     color: $red;
                     transition: all 0.25s ease-in-out;
                     &:hover {
-                        color: $black;
+                        color: var(--text_hover);
                     }
                 }
             }
@@ -957,13 +982,14 @@ body {
 
 #return-to-top {
     position: fixed;
-    bottom: 2.5rem;
+    bottom: 8rem;
     right: 2.5rem;
     background-color: rgba(0, 0, 0, 0.2);
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
     transition: all 0.25s ease-in-out;
+    z-index: 10000;
     i {
         color: $text-color-w;
         position: relative;
@@ -975,6 +1001,65 @@ body {
     &:hover {
         background-color: $red;
     }
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 1000;
+    transition: all 0.25s ease-in-out;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: $red;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 /* ========================================== Fade-zoom animation for first dialog ========================================== */
@@ -1481,20 +1566,22 @@ max-width = width - 1
         .services {
             &__item {
                 width: 100%;
-                margin-left: 1rem;
-                margin-right: 1rem;
+                margin-left: 0rem;
+                margin-right: 0rem;
             }
         }
         .experience {
             &__list {
                 width: 100%;
-                margin-left: 1rem;
-                margin-right: 1rem;
+                margin-left: 0rem;
+                margin-right: 0rem;
             }
         }
         .works {
             &__item {
                 width: 100%;
+                margin-left: 0;
+                margin-right: 0;
             }
         }
         .services {

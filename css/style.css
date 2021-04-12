@@ -1,4 +1,18 @@
 @charset "UTF-8";
+:root {
+  --background: #F9F9FF;
+  --text_title: #5E5C7F;
+  --text: #5E5C7F;
+  --text_hover: #181616;
+}
+
+[data-theme="dark"] {
+  --background: #353353;
+  --text_title: #FFFFFF;
+  --text: #DEDEEA;
+  --text_hover: #FFD15C;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -24,7 +38,7 @@ img {
 }
 
 body {
-  background-color: #F9F9FF;
+  background-color: var(--background);
   color: #5E5C7F;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
@@ -72,7 +86,7 @@ body {
 
 .line-bar {
   height: 100%;
-  background-color: #6C6CE5;
+  background-color: #FFD15C;
   opacity: 0.5;
   -webkit-animation-name: line;
           animation-name: line;
@@ -446,6 +460,7 @@ body {
   position: relative;
   font-weight: 700;
   padding: 0;
+  color: var(--text_title);
 }
 
 .content .section-title:before {
@@ -495,6 +510,10 @@ body {
   color: #FFFFFF;
   font-size: 4rem;
   font-weight: 700;
+}
+
+.content .home .intro h1 span {
+  color: #F97B8B;
 }
 
 .content .home .intro p {
@@ -724,7 +743,7 @@ body {
 }
 
 .content .about .fact-item:last-child:hover > span {
-  color: #353353;
+  color: #44D4B4;
 }
 
 .content .about .fact-item span {
@@ -738,12 +757,14 @@ body {
 .content .about .fact-item .details h3 {
   font-size: 4rem;
   font-weight: 700;
+  color: var(--text);
 }
 
 .content .about .fact-item .details p {
   margin-top: 0.5rem;
   font-size: 1.6rem;
   font-weight: 500;
+  color: var(--text);
 }
 
 .content .services__list {
@@ -840,6 +861,7 @@ body {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
+  color: var(--text);
 }
 
 .content .services__notice a {
@@ -849,7 +871,7 @@ body {
 }
 
 .content .services__notice a:hover {
-  color: #181616;
+  color: var(--text_hover);
 }
 
 .content .experience__category {
@@ -989,6 +1011,7 @@ body {
   margin-right: 3rem;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  color: var(--text);
 }
 
 .content .works__nav-item:last-child {
@@ -1158,6 +1181,7 @@ body {
 .content .contact-info h3 {
   font-size: 2.3rem;
   font-weight: 700;
+  color: var(--text);
 }
 
 .content .contact-info p {
@@ -1165,6 +1189,7 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2rem;
+  color: var(--text);
 }
 
 .content .contact-info p a {
@@ -1174,7 +1199,7 @@ body {
 }
 
 .content .contact-info p a:hover {
-  color: #181616;
+  color: var(--text_hover);
 }
 
 .content .contact-info .social {
@@ -1263,7 +1288,7 @@ body {
 
 #return-to-top {
   position: fixed;
-  bottom: 2.5rem;
+  bottom: 8rem;
   right: 2.5rem;
   background-color: rgba(0, 0, 0, 0.2);
   width: 4rem;
@@ -1271,6 +1296,7 @@ body {
   border-radius: 100%;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  z-index: 10000;
 }
 
 #return-to-top i {
@@ -1285,6 +1311,73 @@ body {
 
 #return-to-top:hover {
   background-color: #FF4C60;
+}
+
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 1000;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #FF4C60;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* ========================================== Fade-zoom animation for first dialog ========================================== */
@@ -1884,16 +1977,18 @@ max-width = width - 1
   }
   .content .services__item {
     width: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
   .content .experience__list {
     width: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
   .content .works__item {
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .content .services__notice {
     padding: 0 4rem;
