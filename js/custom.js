@@ -261,11 +261,11 @@ $(function(){
   /*=============== Scroll to Top ===============*/
   $(window).scroll(function() {
     if ($(this).scrollTop() >= 350) {        // If page is scrolled more than 50px
-      $('#return-to-top').fadeIn(200);    // Fade in the arrow
-      $('.theme-switch-wrapper').fadeIn(200);    // Fade in the arrow
+      $('#return-to-top').addClass('visible');
+      $('.theme-switch-wrapper').addClass('visible');
     } else {
-      $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-      $('.theme-switch-wrapper').fadeOut(200);   // Else fade out the arrow
+      $('#return-to-top').removeClass('visible');
+      $('.theme-switch-wrapper').removeClass('visible');
     }
   });
 
@@ -284,11 +284,11 @@ $(function(){
 $(function(){
   $('.text').typed({
     strings: [
-      "hi, <span>nvan.ha</span> here"
+      "^700 hi, <span>nvan.ha</span> here"
     ],
-    typeSpeed: 100,
+    typeSpeed: 150,
     backSpeed: 100,
-    // loop: true,
+    loop: true,
     showCursor: false
   });
 })
