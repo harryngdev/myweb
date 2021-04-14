@@ -1531,6 +1531,7 @@ input:checked + .slider:before {
   font-weight: 700;
   margin-top: 2rem;
   line-height: 5.7rem;
+  word-break: break-word;
   color: var(--color-text-primary);
 }
 
