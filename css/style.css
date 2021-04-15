@@ -1088,8 +1088,6 @@ body {
   margin-top: 3rem;
   overflow: hidden;
   border-radius: 0.7rem;
-  -webkit-box-shadow: 2px 2px 8px var(--color-border-primary);
-          box-shadow: 2px 2px 8px var(--color-border-primary);
 }
 
 .content .works__item-inner {
