@@ -985,12 +985,9 @@ body {
         &-bg {
             height: 100%;
             width: calc(50% - 2rem);
-            border-radius: 2rem;
+            border-radius: 1.5rem;
             box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
-            background-image: url("../images/icons/map.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            overflow: hidden;
         }
     }
 }
@@ -1578,16 +1575,16 @@ max-width = width - 1
         .contact {
             &__inner {
                 margin-top: 3rem;
-            }
-            &-bg {
-                display: none;
+                flex-wrap: wrap;
+                height: auto;
             }
             &-info {
                 width: 100%;
-                background-image: url("../images/icons/map.svg");
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;
+                padding-bottom: 8rem;
+            }
+            &-bg {
+                width: 100%;
+                height: 250px;
             }
         }
     }

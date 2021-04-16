@@ -1273,13 +1273,10 @@ body {
 .content .contact-bg {
   height: 100%;
   width: calc(50% - 2rem);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   -webkit-box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
           box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
-  background-image: url("../images/icons/map.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  overflow: hidden;
 }
 
 .footer {
@@ -1997,16 +1994,17 @@ max-width = width - 1
   }
   .content .contact__inner {
     margin-top: 3rem;
-  }
-  .content .contact-bg {
-    display: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
   }
   .content .contact-info {
     width: 100%;
-    background-image: url("../images/icons/map.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    padding-bottom: 8rem;
+  }
+  .content .contact-bg {
+    width: 100%;
+    height: 250px;
   }
   .footer__item {
     margin: 0 4rem;
