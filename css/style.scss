@@ -995,21 +995,20 @@ body {
 .footer {
     margin-left: 290px;
     &__list {
-        margin: 4rem 9.1rem 10rem 9.1rem;
+        margin: 4rem 9.1rem 7rem 9.1rem;
         @include flex(stretch, space-between, wrap);
     }
     &__item {
         width: calc(33.33% - 4rem);
+        text-align: center;
         &:nth-child(4),
         &:nth-child(5),
         &:nth-child(6) {
             margin-top: 4rem;
         }
-        img {
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        i {
+            font-size: 5rem;
+            color: var(--color-text-secondary);
         }
         &:hover {
             cursor: pointer;
