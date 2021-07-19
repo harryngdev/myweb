@@ -1009,15 +1009,18 @@ body {
 .content .works .pf-filter-wrapper .portfolio-filter-mobile {
   width: 100%;
   border: 0;
-  background-color: var(--color-btn-bg);
+  background-color: var(--color-btn-bg) !important;
   border-radius: 0.7rem;
-  border: 1px solid var(--color-btn-border);
+  border: 1px solid var(--color-btn-border) !important;
   padding: 1rem 2rem;
   outline: none;
   color: var(--color-text-primary);
   font-size: 1.6rem;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .content .works .pf-filter-wrapper .portfolio-filter-mobile option {
@@ -1273,12 +1276,13 @@ body {
 .content .contact-bg {
   height: 100%;
   width: calc(50% - 2rem);
-  border-radius: 1.5rem;
+  border-radius: 1.5rem !important;
   -webkit-box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
           box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
+/* ========================================== FOOTER ========================================== */
 .footer {
   margin-left: 290px;
 }
@@ -1320,6 +1324,7 @@ body {
   transition: all 0.2s linear;
 }
 
+/* ========================================== OTHER ========================================== */
 #return-to-top {
   position: fixed;
   bottom: 8rem;
@@ -1798,10 +1803,7 @@ input:checked + .slider:before {
   }
 }
 
-/*
-desktop first: 1440 1366 1280 1024 768 480 320
-max-width = width - 1
-*/
+/* ========================================== RESPONSIVE ========================================== */
 @media screen and (max-width: 1279px) {
   .content section {
     padding-top: 50px;
