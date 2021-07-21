@@ -340,6 +340,10 @@ body {
   color: #FFD15C;
 }
 
+.header-desktop-menu li:nth-child(3) {
+  display: none !important;
+}
+
 .header-desktop-footer {
   position: absolute;
   bottom: 5rem;
@@ -805,6 +809,10 @@ body {
   color: var(--color-text-secondary);
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+}
+
+.content .services {
+  display: none !important;
 }
 
 .content .services__list {

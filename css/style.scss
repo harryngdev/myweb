@@ -301,6 +301,9 @@ body {
                         }
                     }
                 }
+                &:nth-child(3) {
+                    display: none !important;
+                }
             }
         }
         &-footer {
@@ -648,6 +651,7 @@ body {
         }
     }
     .services {
+        display: none !important;
         &__list {
             margin: 7rem 9.1rem 0 9.1rem;
             @include flex(center, space-between);
