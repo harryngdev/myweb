@@ -1407,8 +1407,8 @@ body {
 }
 
 .content .home .intro .circle-wrapper .spring-spinner .spring-spinner-part.bottom {
-  -webkit-transform: rotate(180deg) scale(-1, 1) translateZ(0);
-          transform: rotate(180deg) scale(-1, 1) translateZ(0);
+  -webkit-transform: rotate(180deg) scale(-1, 1);
+          transform: rotate(180deg) scale(-1, 1);
 }
 
 .content .home .intro .circle-wrapper .spring-spinner .spring-spinner-rotator {
@@ -1422,8 +1422,8 @@ body {
           box-sizing: border-box;
   -webkit-animation: spring-spinner-animation 3s ease-in-out infinite;
           animation: spring-spinner-animation 3s ease-in-out infinite;
-  -webkit-transform: rotate(-200deg) translateZ(0);
-          transform: rotate(-200deg) translateZ(0);
+  -webkit-transform: rotate(-200deg);
+          transform: rotate(-200deg);
 }
 
 .content .home .intro .img-wrapper {

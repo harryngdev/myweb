@@ -121,7 +121,7 @@
           width: 12rem;
         }
         .spring-spinner .spring-spinner-part.bottom {
-          transform: rotate(180deg) scale(-1, 1) translateZ(0);
+          transform: rotate(180deg) scale(-1, 1);
         }
         .spring-spinner .spring-spinner-rotator {
           width: 12rem;
@@ -132,7 +132,7 @@
           border-radius: 50%;
           box-sizing: border-box;
           animation: spring-spinner-animation 3s ease-in-out infinite;
-          transform: rotate(-200deg) translateZ(0);
+          transform: rotate(-200deg);
         }
       }
       .img-wrapper {
