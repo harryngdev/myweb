@@ -1,0 +1,45 @@
+.footer {
+  margin-left: 290px;
+  &__list {
+    margin: 4rem 9.1rem 7rem 9.1rem;
+    @include flex(stretch, space-between, wrap);
+    @include tablet(1279px) {
+      margin: 4rem 3.1rem 4rem 3.1rem;
+    }
+  }
+  &__item {
+    width: calc(33.33% - 4rem);
+    text-align: center;
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-top: 4rem;
+    }
+    i {
+      font-size: 5rem;
+      color: var(--color-text-secondary);
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1) translateZ(0);
+      transition: all 0.2s linear;
+    }
+    @include tablet(767px) {
+      margin: 0 4rem;
+      width: calc(50% - 8rem);
+      margin-bottom: 3rem;
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        margin-top: 0;
+      }
+      &:nth-child(5),
+      &:nth-child(6) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include tablet(1023px) {
+    margin-left: 0;
+  }
+}

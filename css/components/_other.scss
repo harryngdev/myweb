@@ -1,0 +1,221 @@
+/* ========================================== OTHER ========================================== */
+#return-to-top {
+  position: fixed;
+  bottom: 8rem;
+  right: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  transition: all 0.25s ease-in-out;
+  z-index: 10000;
+  i {
+    color: $text-color-w;
+    position: relative;
+    font-size: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0);
+  }
+  &:hover {
+    background-color: $primary-text;
+  }
+}
+
+.return-to-top {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: $text-color-w;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: $primary-text;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ========================================== Fade-zoom animation for first dialog ========================================== */
+.mfp-zoom-in {
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8) translateZ(0);
+  }
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1) translateZ(0);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  &.mfp-removing {
+    .mfp-with-anim {
+      opacity: 0;
+      transform: scale(0.8) translateZ(0);
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+}
+
+.my-mfp-zoom-in {
+  /* start state */
+  .zoom-anim-dialog {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8) translateZ(0);
+  }
+  /* animate in */
+  &.mfp-ready {
+    .zoom-anim-dialog {
+      opacity: 1;
+      transform: scale(1) translateZ(0);
+    }
+  }
+  /* animate out */
+  &.mfp-removing {
+    .zoom-anim-dialog {
+      transform: scale(0.8) translateZ(0);
+      opacity: 0;
+    }
+  }
+  /* Dark overlay, start state */
+  &.mfp-bg {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  /* animate in */
+  &.mfp-ready {
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  /* animate out */
+  &.mfp-removing {
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+}
+
+/* Styles for dialog window */
+.white-popup {
+  background: var(--color-popup-bg);
+  border-radius: 1rem;
+  padding: 30px;
+  text-align: left;
+  max-width: 650px;
+  margin: 40px auto;
+  position: relative;
+  img {
+    border-radius: 1rem;
+  }
+  h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    line-height: 5.7rem;
+    letter-spacing: 0.5px;
+    word-break: break-word;
+    color: var(--color-text-primary);
+  }
+  p {
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) translateZ(0);
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 100%;
+      background-color: $primary-text;
+    }
+  }
+  .button {
+    margin-top: 2rem;
+  }
+}
+
+.mfp-close {
+  font-size: 40px;
+  color: $text-color-w;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    color: $primary-text;
+  }
+}

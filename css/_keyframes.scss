@@ -1,0 +1,237 @@
+/* ========================================== ANIMATION ========================================== */
+@keyframes moveSvg {
+  0% {
+    offset-distance: 0%;
+  }
+  25% {
+    background-color: $blue;
+  }
+  75% {
+    background-color: $primary-text;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(360deg);
+    margin-left: 0;
+  }
+  50.0001%,
+  100% {
+    margin-left: -60px;
+  }
+}
+
+@keyframes preloader-move {
+  0%,
+  50% {
+    left: -8px;
+  }
+  25% {
+    background-color: $primary-text;
+  }
+  75% {
+    background-color: $blue;
+  }
+  50.0001%,
+  100% {
+    left: auto;
+    right: -8px;
+  }
+}
+
+@keyframes drop1 {
+  100% {
+    transform: translate(32px, 8px) scale(0);
+  }
+}
+
+@keyframes drop2 {
+  0% {
+    transform: translate(0, 0) scale(0.9);
+  }
+  100% {
+    transform: translate(32px, -8px) scale(0);
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: 50%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+
+@keyframes box-up {
+  0% {
+    margin-top: -1rem;
+  }
+  50% {
+    margin-top: -2rem;
+  }
+  100% {
+    margin-top: -4rem;
+  }
+}
+
+@keyframes btn-contact-move {
+  30%,
+  36% {
+    transform: translateY(calc(-6px * var(--move))) translateZ(0) rotate(calc(-13deg * var(--rotate) * var(--part)));
+  }
+  50% {
+    transform: translateY(calc(3px * var(--move))) translateZ(0) rotate(calc(6deg * var(--rotate) * var(--part)));
+  }
+  70% {
+    transform: translateY(calc(-2px * var(--move))) translateZ(0) rotate(calc(-3deg * var(--rotate) * var(--part)));
+  }
+}
+
+@keyframes btn-contact-move-out {
+  30%,
+  36% {
+    transform: translateY(calc(6px * var(--move))) translateZ(0) rotate(calc(13deg * var(--rotate) * var(--part)));
+  }
+  50% {
+    transform: translateY(calc(-3px * var(--move))) translateZ(0) rotate(calc(-6deg * var(--rotate) * var(--part)));
+  }
+  70% {
+    transform: translateY(calc(2px * var(--move))) translateZ(0) rotate(calc(3deg * var(--rotate) * var(--part)));
+  }
+}
+
+@keyframes btn-download-cv-move {
+  40% {
+    transform: translateY(var(--btn-download-cv-move));
+    text-shadow: var(--btn-download-cv-shadow-active);
+  }
+}
+
+@keyframes self-building-square-spinner {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+    top: 0;
+  }
+  50.9% {
+    opacity: 1;
+    top: 0;
+  }
+  55.9% {
+    opacity: 0;
+    top: inherit;
+  }
+}
+
+@keyframes spring-spinner-animation {
+  0% {
+    border-width: calc(12rem / 7);
+  }
+  25% {
+    border-width: calc(12rem / 23.33);
+  }
+  50% {
+    transform: rotate(115deg);
+    border-width: calc(12rem / 7);
+  }
+  75% {
+    border-width: calc(12rem / 23.33);
+  }
+  100% {
+    border-width: calc(12rem / 7);
+  }
+}
+
+@keyframes trinity-rings-spinner-circle1-animation {
+  0% {
+    transform: rotateZ(20deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateZ(100deg) rotateY(360deg);
+  }
+}
+
+@keyframes trinity-rings-spinner-circle2-animation {
+  0% {
+    transform: rotateZ(100deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg) rotateX(360deg);
+  }
+}
+
+@keyframes trinity-rings-spinner-circle3-animation {
+  0% {
+    transform: rotateZ(100deg) rotateX(-360deg);
+  }
+  100% {
+    transform: rotateZ(-360deg) rotateX(360deg);
+  }
+}
+
+@keyframes orbit-spinner-orbit-one-animation {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbit-spinner-orbit-two-animation {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbit-spinner-orbit-three-animation {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}

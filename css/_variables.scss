@@ -1,0 +1,49 @@
+$primary-background: #353353;
+$primary-text: #ffd15c;
+$text-color-w: #ffffff;
+$text-color-b: #5e5c7f;
+$silver: #9c9ab3;
+$blue: #6c6ce5;
+$red: #ff4c60;
+$pink: #f97b8b;
+$black: #181616;
+$light: #f8f9fa;
+$icon-fact: #dedeea;
+$text-white-popup: #454360;
+$green: #44d4b4;
+
+:root {
+  --color-header-bg: #24292e;
+  --color-header-logo: #fff;
+  --color-header-border: hsl(0deg 0% 100% / 15%);
+
+  --color-bg-primary: #f6f8fa;
+  --color-text-primary: #24292e;
+  --color-text-secondary: #586069;
+  --color-border-primary: #e1e4e8;
+  --color-border-secondary: #eaecef;
+  --color-boxcontent-bg: #fff;
+  --color-fact-icon: #dedeea;
+  --color-btn-bg: #fafbfc;
+  --color-btn-border: rgb(27 31 35 / 15%);
+  --color-popup-bg: #fff;
+  --color-square-spinner: #c9d1d9;
+}
+
+[data-theme="dark"] {
+  --color-header-bg: #161b22;
+  --color-header-logo: #f0f6fc;
+  --color-header-border: hsl(0deg 0% 100% / 15%);
+
+  --color-bg-primary: #0d1117;
+  --color-text-primary: #c9d1d9;
+  --color-text-secondary: #8b949e;
+  --color-border-primary: #30363d;
+  --color-border-secondary: #21262d;
+  --color-boxcontent-bg: #161b22;
+  --color-fact-icon: #30363d;
+  --color-btn-bg: #21262d;
+  --color-btn-border: #30363d;
+  --color-popup-bg: #24292e;
+  --color-square-spinner: rgb(69, 67, 96);
+}

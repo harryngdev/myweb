@@ -1,0 +1,114 @@
+/* ========================================== HEADER ========================================== */
+.header {
+  &-desktop {
+    background-color: var(--color-header-bg);
+    color: var(--color-header-logo);
+    border-right: 1px solid var(--color-header-border);
+    padding: 50px 40px 40px;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-height: 100vh;
+    width: 290px;
+    z-index: 1;
+    transform: translateX(0) translateZ(0);
+    transition: all 0.3s ease-in-out;
+    @include tablet(1023px) {
+      transform: translateX(-290px) translateZ(0);
+    }
+    &-logo a img {
+      height: 10rem;
+    }
+    &-menu {
+      padding: 0;
+      margin-top: 13rem;
+      margin-bottom: 13rem;
+      li {
+        padding: 8px 0;
+        a {
+          color: var(--color-header-logo);
+          font-family: "Quicksand", sans-serif;
+          font-size: 1.6rem;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          transition: all 0.25s linear;
+          i {
+            color: $primary-text;
+            margin-right: 2rem;
+          }
+          &:hover {
+            color: $primary-text;
+          }
+          &.nav-link {
+            &.active {
+              color: $primary-text;
+            }
+          }
+        }
+        &:nth-child(3) {
+          display: none !important;
+        }
+      }
+    }
+    &-footer {
+      position: absolute;
+      bottom: 5rem;
+      .copyright {
+        color: var(--color-text-secondary);
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        span {
+          font-size: 1.2em;
+          font-weight: 700;
+        }
+        &:first-child {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    &.open {
+      transform: translateX(0) translateZ(0);
+      @include mobile(767px) {
+        width: 100%;
+      }
+    }
+  }
+  &-mobile {
+    background-color: var(--color-header-bg);
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    z-index: 10000;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    .menu-icon {
+      i {
+        color: $text-color-w;
+        font-size: 3rem;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.25s ease-in-out;
+        border: 0;
+        background-color: transparent;
+        &:hover {
+          color: $primary-text;
+        }
+      }
+    }
+    &.open {
+      opacity: 0;
+      visibility: hidden;
+      @include mobile(767px) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    @include tablet(1023px) {
+      display: block;
+    }
+  }
+}

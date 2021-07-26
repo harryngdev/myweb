@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.button {
+  &-contact {
+    --btn-contact-color: #fff;
+    --btn-contact-color-hover: var(--btn-contact-color);
+    --btn-contact-background: #ff4c60;
+    --btn-contact-hover-back: #f97b8b;
+    --btn-contact-hover-front: #f97b8b;
+    --btn-contact-background-hover: var(--btn-contact-background);
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 20px;
+    line-height: 24px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    color: var(--btn-contact-c, var(--btn-contact-color));
+    background: var(--btn-contact-b, var(--btn-contact-background));
+    transition: color 0.2s linear var(--btn-contact-c-d, 0.2s), background 0.3s linear var(--btn-contact-b-d, 0.2s);
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background: var(--btn-contact-pb, var(--btn-contact-hover-back));
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 200%;
+      border-radius: var(--btn-contact-br, 40%);
+      transform: translateY(var(--btn-contact-y, 50%)) translateZ(0);
+      transition: transform var(--btn-contact-d, 0.4s) ease-in var(--btn-contact-d-d, 0s),
+        border-radius 0.5s ease var(--btn-contact-br-d, 0.08s);
+    }
+    &:after {
+      --btn-contact-pb: var(--btn-contact-hover-front);
+      --btn-contact-d: 0.44s;
+    }
+    div {
+      z-index: 1;
+      position: relative;
+      display: flex;
+      span {
+        display: block;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        animation: var(--btn-contact-name, none) 0.7s linear forwards 0.18s;
+      }
+    }
+    &.in {
+      --btn-contact-name: btn-contact-move;
+      &:not(.out) {
+        --btn-contact-c: var(--btn-contact-color-hover);
+        --btn-contact-b: var(--btn-contact-background-hover);
+        &:before,
+        &:after {
+          --btn-contact-y: 0;
+          --btn-contact-br: 5%;
+        }
+        &:after {
+          --btn-contact-br: 10%;
+          --btn-contact-d-d: 0.02s;
+        }
+      }
+      &.out {
+        --btn-contact-name: btn-contact-move-out;
+        &:before {
+          --btn-contact-d-d: 0.06s;
+        }
+      }
+    }
+  }
+  &-download-cv {
+    --btn-download-cv-background: #ff4c60;
+    --btn-download-cv-text: #fff;
+    --btn-download-cv-font-size: 15px;
+    --btn-download-cv-duration: 0.5s;
+    --btn-download-cv-move-hover: -4px;
+    --btn-download-cv-shadow: 0 2px 8px -1px #{rgba(#ff4c60, 0.32)};
+    --btn-download-cv-shadow-hover: 0 4px 20px -2px #{rgba(#ff4c60, 0.5)};
+    padding: 8px 28px;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 20px;
+    display: inline-block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: var(--btn-download-cv-font-size);
+    letter-spacing: 0.1rem;
+    background: var(--btn-download-cv-background);
+    color: var(--btn-download-cv-text);
+    box-shadow: var(--btn-download-cv-shadow);
+    transform: translateY(var(--btn-download-cv-y)) translateZ(0);
+    transition: transform var(--btn-download-cv-duration) ease, box-shadow var(--btn-download-cv-duration) ease;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    div {
+      display: flex;
+      span {
+        display: block;
+        backface-visibility: hidden;
+        font-style: normal;
+        $i: 1;
+        @while $i < 12 {
+          &:nth-child(#{$i}) {
+            --btn-download-cv-d: #{$i / 20 + s};
+          }
+          $i: $i + 1;
+        }
+      }
+    }
+    &:hover {
+      --btn-download-cv-y: var(--btn-download-cv-move-hover);
+      --btn-download-cv-shadow: var(--btn-download-cv-shadow-hover);
+      --btn-download-cv-move: -4px;
+      --btn-download-cv-shadow-active: 0 3px 1px rgba(0, 0, 0, 0.2);
+      span {
+        animation: btn-download-cv-move var(--btn-download-cv-duration) linear var(--btn-download-cv-d);
+      }
+    }
+  }
+  .btn {
+    font-size: 1.5rem;
+    color: $text-color-w;
+    padding: 1.2rem 3rem;
+    border-radius: 3rem;
+    font-family: "Quicksand", sans-serif;
+    background-color: $red;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    &:hover {
+      animation-name: button-push;
+      animation-duration: 0.3s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 0.3rem;
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  &-bar {
+    height: 100%;
+    background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    opacity: 0.5;
+    animation-name: line;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+.none-el {
+  display: none;
+}
+
+.morphext > .animated {
+  display: inline-block;
+}

@@ -155,7 +155,7 @@ $(window).on("load", function () {
     // display loading icon
     $(".load-more .button .btn i").css("display", "inline-block");
     $(".load-more .button .btn i").addClass("fa-spin");
-    $("#works .container .works__nav li").removeClass("none-el");
+    $("#works .container .works__nav li").toggleClass("none-el");
 
     $(document).ajaxStop(function () {
       setTimeout(function () {
@@ -199,6 +199,8 @@ $(function () {
     $(
       ".content .about, .content .services, .content .experience, .content .works, .content .contact, footer.footer"
     ).toggleClass("none-el");
+    $(".menu-icon i").toggleClass("fas fa-bars");
+    $(".menu-icon i").toggleClass("fas fa-times");
   });
 
   $("main.content").on("click", function () {
