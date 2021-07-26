@@ -82,7 +82,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(26px) translateZ(0);
 }
 
 .slider.round {
@@ -98,7 +98,7 @@ input:checked + .slider:before {
   .mfp-with-anim {
     opacity: 0;
     transition: all 0.2s ease-in-out;
-    transform: scale(0.8) translateZ(0);
+    transform: scale(0.8);
   }
   &.mfp-bg {
     opacity: 0;
@@ -107,7 +107,7 @@ input:checked + .slider:before {
   &.mfp-ready {
     .mfp-with-anim {
       opacity: 1;
-      transform: scale(1) translateZ(0);
+      transform: scale(1);
     }
     &.mfp-bg {
       opacity: 0.8;
@@ -116,7 +116,7 @@ input:checked + .slider:before {
   &.mfp-removing {
     .mfp-with-anim {
       opacity: 0;
-      transform: scale(0.8) translateZ(0);
+      transform: scale(0.8);
     }
     &.mfp-bg {
       opacity: 0;
@@ -129,19 +129,19 @@ input:checked + .slider:before {
   .zoom-anim-dialog {
     opacity: 0;
     transition: all 0.2s ease-in-out;
-    transform: scale(0.8) translateZ(0);
+    transform: scale(0.8);
   }
   /* animate in */
   &.mfp-ready {
     .zoom-anim-dialog {
       opacity: 1;
-      transform: scale(1) translateZ(0);
+      transform: scale(1);
     }
   }
   /* animate out */
   &.mfp-removing {
     .zoom-anim-dialog {
-      transform: scale(0.8) translateZ(0);
+      transform: scale(0.8);
       opacity: 0;
     }
   }

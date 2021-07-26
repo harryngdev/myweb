@@ -276,8 +276,8 @@ body {
   font-weight: 600;
   letter-spacing: 0.1px;
   display: inline-block;
-  -webkit-transform: perspective(1px) translateZ(0);
-          transform: perspective(1px) translateZ(0);
+  -webkit-transform: perspective(1px);
+          transform: perspective(1px);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
@@ -862,8 +862,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) translateZ(0);
+          transform: translate(-50%, -50%) translateZ(0);
 }
 
 #preloader .outer .goo-outer {
@@ -2528,8 +2528,8 @@ body {
 
 .footer__item:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.1) translateZ(0);
-          transform: scale(1.1) translateZ(0);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
@@ -2649,8 +2649,8 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-          transform: translateX(26px);
+  -webkit-transform: translateX(26px) translateZ(0);
+          transform: translateX(26px) translateZ(0);
 }
 
 .slider.round {
@@ -2666,8 +2666,8 @@ input:checked + .slider:before {
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transform: scale(0.8) translateZ(0);
-          transform: scale(0.8) translateZ(0);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .mfp-zoom-in.mfp-bg {
@@ -2678,8 +2678,8 @@ input:checked + .slider:before {
 
 .mfp-zoom-in.mfp-ready .mfp-with-anim {
   opacity: 1;
-  -webkit-transform: scale(1) translateZ(0);
-          transform: scale(1) translateZ(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .mfp-zoom-in.mfp-ready.mfp-bg {
@@ -2688,8 +2688,8 @@ input:checked + .slider:before {
 
 .mfp-zoom-in.mfp-removing .mfp-with-anim {
   opacity: 0;
-  -webkit-transform: scale(0.8) translateZ(0);
-          transform: scale(0.8) translateZ(0);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .mfp-zoom-in.mfp-removing.mfp-bg {
@@ -2709,19 +2709,19 @@ input:checked + .slider:before {
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transform: scale(0.8) translateZ(0);
-          transform: scale(0.8) translateZ(0);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
   opacity: 1;
-  -webkit-transform: scale(1) translateZ(0);
-          transform: scale(1) translateZ(0);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
-  -webkit-transform: scale(0.8) translateZ(0);
-          transform: scale(0.8) translateZ(0);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   opacity: 0;
 }
 
