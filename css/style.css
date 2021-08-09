@@ -304,8 +304,11 @@ body {
 
 .line-bar {
   height: 100%;
-  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
-  opacity: 0.5;
+  margin: 0 auto;
+  background: #833ab4;
+  background: -webkit-gradient(linear, left top, right top, from(#833ab4), color-stop(50%, #fd1d1d), to(#fcb045));
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  opacity: 0.9;
   -webkit-animation-name: line;
           animation-name: line;
   -webkit-animation-duration: 5s;
@@ -2076,7 +2079,7 @@ body {
   position: absolute;
   display: block;
   border-radius: 50%;
-  border: 3px solid #ffd15c;
+  border: 3px solid #ff4c60;
   opacity: 1;
 }
 
