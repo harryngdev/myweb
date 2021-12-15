@@ -1,866 +1,1253 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- HTML Meta Tags -->
+    <meta name="keywords" content="nvanha, nguyen van ha, web developer" />
+    <meta name="description" content="This is a website describing my life." />
+    <meta name="author" content="Nguyen Van Ha" />
 
-<head>
-  <!-- HTML Meta Tags -->
-  <meta name="keywords" content="nvanha, nguyen van ha, web developer" />
-  <meta name="description" content="This is a website describing my life." />
-  <meta name="author" content="Nguyen Van Ha" />
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="NVANHA" />
+    <meta
+      itemprop="description"
+      content="This is a website describing my life."
+    />
+    <meta
+      itemprop="image"
+      content="https://raw.githubusercontent.com/nvanha/myweb/master/images/logo/logo-250x250.png"
+    />
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="NVANHA" />
-  <meta itemprop="description" content="This is a website describing my life." />
-  <meta itemprop="image" content="https://raw.githubusercontent.com/nvanha/myweb/master/images/logo/logo-250x250.png" />
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://nvanha.github.io/myweb/index.htm"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NVANHA" />
+    <meta
+      property="og:description"
+      content="This is a website describing my life."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/nvanha/myweb/master/images/logo/logo-250x250.png"
+    />
+    <meta property="fb:app_id" content="APPID" />
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://nvanha.github.io/myweb/index.htm" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="NVANHA" />
-  <meta property="og:description" content="This is a website describing my life." />
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/nvanha/myweb/master/images/logo/logo-250x250.png" />
-  <meta property="fb:app_id" content="APPID" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NVANHA" />
+    <meta
+      name="twitter:description"
+      content="This is a website describing my life."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/nvanha/myweb/master/images/logo/logo-250x250.png"
+    />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="NVANHA" />
-  <meta name="twitter:description" content="This is a website describing my life." />
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/nvanha/myweb/master/images/logo/logo-250x250.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web</title>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Web</title>
-
-  <link rel="apple-touch-icon" sizes="180x180" href="images/logo/logo-180x180.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/logo-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="images/logo/logo-16x16.png" />
-  <!-- <link
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/logo/logo-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/logo/logo-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logo/logo-16x16.png"
+    />
+    <!-- <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     /> -->
-  <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" media="all">
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/animate.css" />
-  <link rel="stylesheet" href="css/simple-line-icons.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="css/magnific-popup.css"
+      type="text/css"
+      media="all"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/simple-line-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-  <div id="preloader">
-    <div class="outer">
-      <div class="infinityChrome">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="infinity">
-        <div>
-          <span></span>
+  <body>
+    <div id="preloader">
+      <div class="outer">
+        <div class="infinityChrome">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div>
-          <span></span>
-        </div>
-        <div>
-          <span></span>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-outer">
-        <defs>
-          <filter id="goo">
-            <fegaussianblur in="SourceGraphic" stddeviation="6" result="blur"></fegaussianblur>
-            <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></fecolormatrix>
-            <feblend in="SourceGraphic" in2="goo"></feblend>
-          </filter>
-        </defs>
-      </svg>
-    </div>
-  </div>
-
-  <header class="header-mobile">
-    <div class="menu-icon wow fadeInUp">
-      <i class="fas fa-bars"></i>
-    </div>
-  </header>
-
-  <header class="header-desktop">
-    <div class="header-desktop-logo wow fadeInLeft">
-      <a href="index.htm">
-        <img src="images/logo/logo.png" alt="NVANHA" />
-      </a>
-    </div>
-    <nav class="header-desktop-menu wow fadeInLeft">
-      <ul class="vertical-menu scrollspy">
-        <li class="active"><a href="#home"><i class="icon-home"></i>Home</a></li>
-        <li><a href="#about"><i class="icon-user-following"></i>About</a></li>
-        <li><a href="#services"><i class="icon-briefcase"></i>Services</a></li>
-        <li><a href="#experience"><i class="icon-graduation"></i>Experience</a></li>
-        <li><a href="#works"><i class="icon-layers"></i>Works</a></li>
-        <li><a href="#contact"><i class="icon-bubbles"></i>Contact</a></li>
-      </ul>
-    </nav>
-    <div class="header-desktop-footer wow fadeInLeft">
-      <p class="copyright">Designed & Developed by <span>nvan.ha</span></p>
-      <p class="copyright">All rights reserved <span>2021</span></p>
-    </div>
-  </header>
-
-  <main class="content">
-    <section id="home" class="home">
-      <div class="container">
-        <div class="intro wow fadeInRight">
-          <div class="circle-wrapper none-el">
-            <div class="spring-spinner">
-              <div class="spring-spinner-part top">
-                <div class="spring-spinner-rotator"></div>
-              </div>
-              <div class="spring-spinner-part bottom">
-                <div class="spring-spinner-rotator"></div>
-              </div>
-            </div>
+        <div class="infinity">
+          <div>
+            <span></span>
           </div>
-
-          <div class="img-wrapper">
-            <img src="images/avt/avt.jpg" alt="avt" />
+          <div>
+            <span></span>
           </div>
-
-          <h1 class="text">👋</h1>
-          <p>👋 I'm a <span class="text-rotating">UI/UX Designer, Web Developer</span></p>
-
-          <ul class="social-icons">
-            <li class="list-item" title="facebook" title="facebook"><a href="https://www.facebook.com/nvh1120"
-                target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li class="list-item" title="instagram"><a href="https://www.instagram.com/_haa_nguyen" target="_blank"><i
-                  class="fab fa-instagram"></i></a></li>
-            <li class="list-item" title="github"><a href="https://github.com/nvanha" target="_blank"><i
-                  class="fab fa-github"></i></a></li>
-            <li class="list-item" title="codepen"><a href="https://codepen.io/nvanha" target="_blank"><i
-                  class="fab fa-codepen"></i></a></li>
-            <li class="list-item" title="github"><a href="https://www.tiktok.com/@nvan.ha" target="_blank"><i
-                  class="fab fa-tiktok"></i></a></li>
-            <li class="list-item" title="gmail"><a href="mailto:nvha1120@gmail.com"><i class="fas fa-envelope"></i></a>
-            </li>
-          </ul>
-
-          <a href="#contact" class="button-contact alternative">Contact me</a>
+          <div>
+            <span></span>
+          </div>
         </div>
-
-        <div class="scroll-down wow fadeInRight">
-          <a href="#about" class="mouse-wrapper">
-            <span>Scroll Down</span>
-            <span class="mouse">
-              <span class="wheel"></span>
-            </span>
-          </a>
-        </div>
-
-        <div class="parallax wow fadeInLeft" data-relative-input="true">
-          <svg width="27" height="29" data-depth="0.3" class="layer p1" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z"
-              fill="#FFD15C" fill-rule="evenodd"></path>
-          </svg>
-
-          <svg width="26" height="26" data-depth="0.2" class="layer p2" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z" stroke="#FF4C60" stroke-width="3" fill="none"
-              fill-rule="evenodd"></path>
-          </svg>
-
-          <svg width="30" height="25" data-depth="0.3" class="layer p3" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M.1436 8.9282C3.00213 3.97706 8.2841.92763 14.00013.92796c5.71605.00032 10.9981 3.04992 13.85641 8 2.8583 4.95007 2.8584 11.0491-.00014 16.00024l-2.77128-1.6c2.28651-3.96036 2.28631-8.84002.00011-12.8002-2.2862-3.96017-6.5124-6.40017-11.08513-6.4-4.57271.00018-8.79872 2.43984-11.08524 6.4002l-2.77128-1.6z"
-              fill="#44D7B6" fill-rule="evenodd"></path>
-          </svg>
-
-          <svg width="15" height="23" data-depth="0.6" class="layer p4" xmlns="http://www.w3.org/2000/svg">
-            <rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#FFD15C"
-              fill-rule="evenodd"></rect>
-          </svg>
-
-          <svg width="15" height="23" data-depth="0.2" class="layer p5" xmlns="http://www.w3.org/2000/svg">
-            <rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5"
-              fill-rule="evenodd"></rect>
-          </svg>
-
-          <svg width="49" height="17" data-depth="0.5" class="layer p6" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#FF4C60" fill-rule="evenodd">
-              <path
-                d="M.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C23.1175 5.50106 25.5 10.78292 25.5 16.5H23c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0C4.90625 7.70116 3 11.92697 3 16.5H.5z">
-              </path>
-              <path
-                d="M23.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C46.1175 5.50106 48.5 10.78292 48.5 16.5H46c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0-3.09375 2.28651-5 6.51232-5 11.08535h-2.5z">
-              </path>
-            </g>
-          </svg>
-
-          <svg width="26" height="26" data-depth="0.4" class="layer p7" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 22.6459L2.42705 1.5h21.1459L13 22.6459z" stroke="#FFD15C" stroke-width="3" fill="none"
-              fill-rule="evenodd"></path>
-          </svg>
-
-          <svg width="19" height="21" data-depth="0.3" class="layer p8" xmlns="http://www.w3.org/2000/svg">
-            <rect transform="rotate(-40 6.25252 10.12626)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5"
-              fill-rule="evenodd"></rect>
-          </svg>
-
-          <svg width="30" height="25" data-depth="0.3" data-depth-y="-1.30" class="layer p9"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M29.8564 16.0718c-2.85854 4.95114-8.1405 8.00057-13.85654 8.00024-5.71605-.00032-10.9981-3.04992-13.85641-8-2.8583-4.95007-2.8584-11.0491.00014-16.00024l2.77128 1.6c-2.28651 3.96036-2.28631 8.84002-.00011 12.8002 2.2862 3.96017 6.5124 6.40017 11.08513 6.4 4.57271-.00018 8.79872-2.43984 11.08524-6.4002l2.77128 1.6z"
-              fill="#6C6CE5" fill-rule="evenodd"></path>
-          </svg>
-
-          <svg width="47" height="29" data-depth="0.2" class="layer p10" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#44D7B6" fill-rule="evenodd">
-              <path
-                d="M46.78878 17.19094c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36265-9.0893-.26708-11.74616-4.27524-2.65686-4.00817-3.08917-9.78636-1.13381-15.15866l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12693 2.12514 3.20674 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40949 8.48988-8.70673l2.34923.85505z">
-              </path>
-              <path
-                d="M25.17585 9.32448c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36264-9.0893-.26708-11.74616-4.27525C.16049 11.92447-.27182 6.14628 1.68354.77398l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12692 2.12514 3.20675 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40948 8.48988-8.70672l2.34923.85505z">
-              </path>
-            </g>
-          </svg>
-
-          <svg width="33" height="20" data-depth="0.5" class="layer p11" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M32.36774.34317c.99276 5.63023-1.09332 11.3614-5.47227 15.03536-4.37895 3.67396-10.3855 4.73307-15.75693 2.77837C5.76711 16.2022 1.84665 11.53014.8539 5.8999l3.15139-.55567c.7941 4.50356 3.93083 8.24147 8.22772 9.8056 4.29688 1.56413 9.10275.71673 12.60554-2.2227C28.34133 9.98771 30.01045 5.4024 29.21635.89884l3.15139-.55567z"
-              fill="#FFD15C" fill-rule="evenodd"></path>
-          </svg>
-        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-outer">
+          <defs>
+            <filter id="goo">
+              <fegaussianblur
+                in="SourceGraphic"
+                stddeviation="6"
+                result="blur"
+              ></fegaussianblur>
+              <fecolormatrix
+                in="blur"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                result="goo"
+              ></fecolormatrix>
+              <feblend in="SourceGraphic" in2="goo"></feblend>
+            </filter>
+          </defs>
+        </svg>
       </div>
-    </section>
+    </div>
 
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-title wow fadeInDown">
-          <div class="square-wrapper">
-            <div class="self-building-square-spinner">
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square clear"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square clear"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-            </div>
-          </div>
-          <span>About Me</span>
-        </div>
+    <header class="header-mobile">
+      <div class="menu-icon wow fadeInUp">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
 
-        <div class="information">
-          <div class="avt wow fadeInLeft">
-            <div class="avt-circle-wrapper none-el">
-              <div class="half-circle-spinner">
-                <div class="circle circle-1"></div>
-                <div class="circle circle-2"></div>
+    <header class="header-desktop">
+      <div class="header-desktop-logo wow fadeInLeft">
+        <a href="index.htm">
+          <img src="images/logo/logo.png" alt="NVANHA" />
+        </a>
+      </div>
+      <nav class="header-desktop-menu wow fadeInLeft">
+        <ul class="vertical-menu scrollspy">
+          <li class="active">
+            <a href="#home"><i class="icon-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="#about"><i class="icon-user-following"></i>About</a>
+          </li>
+          <li>
+            <a href="#services"><i class="icon-briefcase"></i>Services</a>
+          </li>
+          <li>
+            <a href="#experience"><i class="icon-graduation"></i>Experience</a>
+          </li>
+          <li>
+            <a href="#works"><i class="icon-layers"></i>Works</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="icon-bubbles"></i>Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-desktop-footer wow fadeInLeft">
+        <p class="copyright">Designed & Developed by <span>nvan.ha</span></p>
+        <p class="copyright">All rights reserved <span>2021</span></p>
+      </div>
+    </header>
+
+    <main class="content">
+      <section id="home" class="home">
+        <div class="container">
+          <div class="intro wow fadeInRight">
+            <div class="circle-wrapper none-el">
+              <div class="spring-spinner">
+                <div class="spring-spinner-part top">
+                  <div class="spring-spinner-rotator"></div>
+                </div>
+                <div class="spring-spinner-part bottom">
+                  <div class="spring-spinner-rotator"></div>
+                </div>
               </div>
             </div>
-            <div class="avt-wrapper">
+
+            <div class="img-wrapper">
               <img src="images/avt/avt.jpg" alt="avt" />
             </div>
+
+            <h1 class="text">👋</h1>
+            <p>
+              👋 I'm a
+              <span class="text-rotating">UI/UX Designer, Web Developer</span>
+            </p>
+
+            <ul class="social-icons">
+              <li class="list-item" title="facebook" title="facebook">
+                <a href="https://www.facebook.com/nvh1120" target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li class="list-item" title="instagram">
+                <a href="https://www.instagram.com/_haa_nguyen" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li class="list-item" title="github">
+                <a href="https://github.com/nvanha" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li class="list-item" title="codepen">
+                <a href="https://codepen.io/nvanha" target="_blank"
+                  ><i class="fab fa-codepen"></i
+                ></a>
+              </li>
+              <li class="list-item" title="github">
+                <a href="https://www.tiktok.com/@nvan.ha" target="_blank"
+                  ><i class="fab fa-tiktok"></i
+                ></a>
+              </li>
+              <li class="list-item" title="gmail">
+                <a href="mailto:nvha1120@gmail.com"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+              </li>
+            </ul>
+
+            <a href="#contact" class="button-contact alternative">Contact me</a>
           </div>
 
-          <div class="description wow fadeInRight">
-            <div class="introduce">
-              <p>I am Ha, web developer from VietNam. I have profound interest in website design, building and
-                customization, and everything in between, also am good at ReactJS.</p>
+          <div class="scroll-down wow fadeInRight">
+            <a href="#about" class="mouse-wrapper">
+              <span>Scroll Down</span>
+              <span class="mouse">
+                <span class="wheel"></span>
+              </span>
+            </a>
+          </div>
 
-              <div class="button-wrapper">
-                <a href="./assets/CV-FrontEndInternship-NguyenVanHa.pdf"
-                  download="./assets/CV-FrontEndInternship-NguyenVanHa.pdf"
-                  class="button-download-cv">Download&nbsp;CV</a>
+          <div class="parallax wow fadeInLeft" data-relative-input="true">
+            <svg
+              width="27"
+              height="29"
+              data-depth="0.3"
+              class="layer p1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z"
+                fill="#FFD15C"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+
+            <svg
+              width="26"
+              height="26"
+              data-depth="0.2"
+              class="layer p2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z"
+                stroke="#FF4C60"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+
+            <svg
+              width="30"
+              height="25"
+              data-depth="0.3"
+              class="layer p3"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.1436 8.9282C3.00213 3.97706 8.2841.92763 14.00013.92796c5.71605.00032 10.9981 3.04992 13.85641 8 2.8583 4.95007 2.8584 11.0491-.00014 16.00024l-2.77128-1.6c2.28651-3.96036 2.28631-8.84002.00011-12.8002-2.2862-3.96017-6.5124-6.40017-11.08513-6.4-4.57271.00018-8.79872 2.43984-11.08524 6.4002l-2.77128-1.6z"
+                fill="#44D7B6"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+
+            <svg
+              width="15"
+              height="23"
+              data-depth="0.6"
+              class="layer p4"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                transform="rotate(30 9.86603 10.13397)"
+                x="7"
+                width="3"
+                height="25"
+                rx="1.5"
+                fill="#FFD15C"
+                fill-rule="evenodd"
+              ></rect>
+            </svg>
+
+            <svg
+              width="15"
+              height="23"
+              data-depth="0.2"
+              class="layer p5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                transform="rotate(30 9.86603 10.13397)"
+                x="7"
+                width="3"
+                height="25"
+                rx="1.5"
+                fill="#6C6CE5"
+                fill-rule="evenodd"
+              ></rect>
+            </svg>
+
+            <svg
+              width="49"
+              height="17"
+              data-depth="0.5"
+              class="layer p6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="#FF4C60" fill-rule="evenodd">
+                <path
+                  d="M.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C23.1175 5.50106 25.5 10.78292 25.5 16.5H23c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0C4.90625 7.70116 3 11.92697 3 16.5H.5z"
+                ></path>
+                <path
+                  d="M23.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C46.1175 5.50106 48.5 10.78292 48.5 16.5H46c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0-3.09375 2.28651-5 6.51232-5 11.08535h-2.5z"
+                ></path>
+              </g>
+            </svg>
+
+            <svg
+              width="26"
+              height="26"
+              data-depth="0.4"
+              class="layer p7"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 22.6459L2.42705 1.5h21.1459L13 22.6459z"
+                stroke="#FFD15C"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+
+            <svg
+              width="19"
+              height="21"
+              data-depth="0.3"
+              class="layer p8"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                transform="rotate(-40 6.25252 10.12626)"
+                x="7"
+                width="3"
+                height="25"
+                rx="1.5"
+                fill="#6C6CE5"
+                fill-rule="evenodd"
+              ></rect>
+            </svg>
+
+            <svg
+              width="30"
+              height="25"
+              data-depth="0.3"
+              data-depth-y="-1.30"
+              class="layer p9"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M29.8564 16.0718c-2.85854 4.95114-8.1405 8.00057-13.85654 8.00024-5.71605-.00032-10.9981-3.04992-13.85641-8-2.8583-4.95007-2.8584-11.0491.00014-16.00024l2.77128 1.6c-2.28651 3.96036-2.28631 8.84002-.00011 12.8002 2.2862 3.96017 6.5124 6.40017 11.08513 6.4 4.57271-.00018 8.79872-2.43984 11.08524-6.4002l2.77128 1.6z"
+                fill="#6C6CE5"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+
+            <svg
+              width="47"
+              height="29"
+              data-depth="0.2"
+              class="layer p10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="#44D7B6" fill-rule="evenodd">
+                <path
+                  d="M46.78878 17.19094c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36265-9.0893-.26708-11.74616-4.27524-2.65686-4.00817-3.08917-9.78636-1.13381-15.15866l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12693 2.12514 3.20674 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40949 8.48988-8.70673l2.34923.85505z"
+                ></path>
+                <path
+                  d="M25.17585 9.32448c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36264-9.0893-.26708-11.74616-4.27525C.16049 11.92447-.27182 6.14628 1.68354.77398l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12692 2.12514 3.20675 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40948 8.48988-8.70672l2.34923.85505z"
+                ></path>
+              </g>
+            </svg>
+
+            <svg
+              width="33"
+              height="20"
+              data-depth="0.5"
+              class="layer p11"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M32.36774.34317c.99276 5.63023-1.09332 11.3614-5.47227 15.03536-4.37895 3.67396-10.3855 4.73307-15.75693 2.77837C5.76711 16.2022 1.84665 11.53014.8539 5.8999l3.15139-.55567c.7941 4.50356 3.93083 8.24147 8.22772 9.8056 4.29688 1.56413 9.10275.71673 12.60554-2.2227C28.34133 9.98771 30.01045 5.4024 29.21635.89884l3.15139-.55567z"
+                fill="#FFD15C"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title wow fadeInDown">
+            <div class="square-wrapper">
+              <div class="self-building-square-spinner">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square clear"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square clear"></div>
+                <div class="square"></div>
+                <div class="square"></div>
               </div>
             </div>
-            <div class="skill">
-              <div class="skill-item">
-                <div class="skill-info">
-                  <h4>UI/UX Design</h4>
-                  <p>Landing Pages, Mobile App Design, Responsive Website, Convert PSD to HTML</p>
+            <span>About Me</span>
+          </div>
+
+          <div class="information">
+            <div class="avt wow fadeInLeft">
+              <div class="avt-circle-wrapper none-el">
+                <div class="half-circle-spinner">
+                  <div class="circle circle-1"></div>
+                  <div class="circle circle-2"></div>
                 </div>
               </div>
-              <div class="line">
-                <div class="wow line-bar"></div>
+              <div class="avt-wrapper">
+                <img src="images/avt/avt.jpg" alt="avt" />
               </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <h4>Front-End Development</h4>
-                  <p>HTML, CSS, JavaScript, jQuery, LESS/SASS, Git, ReactJS, Ant Design</p>
+            </div>
+
+            <div class="description wow fadeInRight">
+              <div class="introduce">
+                <p>
+                  I am Ha, web developer from VietNam. I have profound interest
+                  in website design, building and customization, and everything
+                  in between, also am good at ReactJS.
+                </p>
+
+                <div class="button-wrapper">
+                  <a
+                    href="./assets/CV-FrontEndInternship-NguyenVanHa.pdf"
+                    download="./assets/CV-FrontEndInternship-NguyenVanHa.pdf"
+                    class="button-download-cv"
+                    >Download&nbsp;CV</a
+                  >
                 </div>
               </div>
-              <div class="line">
-                <div class="wow line-bar"></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-info">
-                  <h4>Back-End Development</h4>
-                  <p>PHP, NodeJS, WordPress, Laravel, MySQL, Firebase</p>
+              <div class="skill">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>UI/UX Design</h4>
+                    <p>
+                      Landing Pages, Mobile App Design, Responsive Website,
+                      Convert PSD to HTML
+                    </p>
+                  </div>
                 </div>
+                <div class="line">
+                  <div class="wow line-bar"></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Front-End Development</h4>
+                    <p>
+                      HTML, CSS, JavaScript, jQuery, LESS/SASS, Git, ReactJS,
+                      Ant Design
+                    </p>
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="wow line-bar"></div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <h4>Back-End Development</h4>
+                    <p>PHP, NodeJS, MongoDB, MySQL, Firebase</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fact wow fadeInUpBig">
+            <div class="fact-item">
+              <span class="icon icon-fire"></span>
+              <div class="details">
+                <h3><em class="count">23</em></h3>
+                <p>Projects completed</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <span class="icon icon-cup"></span>
+              <div class="details">
+                <h3><em class="count">0</em></h3>
+                <p>Cup of coffee</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <span class="icon icon-people"></span>
+              <div class="details">
+                <h3><em class="count">0</em></h3>
+                <p>Satisfied clients</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <span class="icon icon-badge"></span>
+              <div class="details">
+                <h3><em class="count">0</em></h3>
+                <p>Nominees winner</p>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="fact wow fadeInUpBig">
-          <div class="fact-item">
-            <span class="icon icon-fire"></span>
-            <div class="details">
-              <h3><em class=count>23</em></h3>
-              <p>Projects completed</p>
-            </div>
-          </div>
-          <div class="fact-item">
-            <span class="icon icon-cup"></span>
-            <div class="details">
-              <h3><em class=count>0</em></h3>
-              <p>Cup of coffee</p>
-            </div>
-          </div>
-          <div class="fact-item">
-            <span class="icon icon-people"></span>
-            <div class="details">
-              <h3><em class=count>0</em></h3>
-              <p>Satisfied clients</p>
-            </div>
-          </div>
-          <div class="fact-item">
-            <span class="icon icon-badge"></span>
-            <div class="details">
-              <h3><em class=count>0</em></h3>
-              <p>Nominees winner</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="experience">
-      <div class="container">
-        <div class="section-title wow fadeInDown">
-          <div class="square-wrapper">
-            <div class="self-building-square-spinner">
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square clear"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square clear"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-            </div>
-          </div>
-          <span>Experience</span>
-        </div>
-
-        <div class="experience__category">
-          <div class="experience__list experience__list-edu wow fadeInLeft">
-            <div class="experience__item wow fadeInUp">
-              <div class="experience-icon-wrapper">
-                <div class="trinity-rings-spinner">
-                  <div class="circle"></div>
-                  <div class="circle"></div>
-                  <div class="circle"></div>
-                </div>
+      <section id="experience" class="experience">
+        <div class="container">
+          <div class="section-title wow fadeInDown">
+            <div class="square-wrapper">
+              <div class="self-building-square-spinner">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square clear"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square clear"></div>
+                <div class="square"></div>
+                <div class="square"></div>
               </div>
-              <span class="time">2018 - 2022</span>
-              <h3 class="title">Bachelor's Degree</h3>
-              <p>Information Technology - Can Tho University</p>
             </div>
-
-            <div class="experience__item wow fadeInUp">
-              <div class="experience-icon-wrapper">
-                <div class="trinity-rings-spinner">
-                  <div class="circle"></div>
-                  <div class="circle"></div>
-                  <div class="circle"></div>
-                </div>
-              </div>
-              <span class="time">2019</span>
-              <h3 class="title">Honours Degree</h3>
-              <p>The ICPC 2019 - International Collegiate Programming Contest</p>
-            </div>
-
-            <div class="experience__item wow fadeInUp">
-              <div class="experience-icon-wrapper">
-                <div class="trinity-rings-spinner">
-                  <div class="circle"></div>
-                  <div class="circle"></div>
-                  <div class="circle"></div>
-                </div>
-              </div>
-              <span class="time">2019</span>
-              <h3 class="title">Honours Degree</h3>
-              <p>The Supporter of World Friends ICT Volunteers (KIV)/2019 - Can Tho University</p>
-            </div>
+            <span>Experience</span>
           </div>
 
-          <div class="experience__list experience__list-exp wow fadeInRight">
-            <div class="experience__item wow fadeInUp">
-              <div class="experience-icon-wrapper">
-                <div class="trinity-rings-spinner">
-                  <div class="circle"></div>
-                  <div class="circle"></div>
-                  <div class="circle"></div>
+          <div class="experience__category">
+            <div class="experience__list experience__list-edu wow fadeInLeft">
+              <div class="experience__item wow fadeInUp">
+                <div class="experience-icon-wrapper">
+                  <div class="trinity-rings-spinner">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
                 </div>
+                <span class="time">2018 - 2022</span>
+                <h3 class="title">Bachelor's Degree</h3>
+                <p>Information Technology - Can Tho University</p>
               </div>
-              <span class="time">2020 - Present</span>
-              <h3 class="title">Freelancer</h3>
-              <p>I am in the process of self-studying and working on personal projects</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="works" class="works">
-      <div class="container">
-        <div class="section-title wow fadeInLeft">
-          <div class="square-wrapper">
-            <div class="self-building-square-spinner">
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square clear"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square clear"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-            </div>
-          </div>
-          <span>Recent Works</span>
-        </div>
-
-        <div class="pf-filter-wrapper wow fadeInUp">
-          <select class="portfolio-filter-mobile">
-            <option value="*">Everything</option>
-            <option value=".application">Application</option>
-            <option value=".ecommerce">Ecommerce</option>
-            <option value=".ui_template">UI Design</option>
-            <option value=".form_validation">Form Validation</option>
-            <option value=".api">API</option>
-          </select>
-        </div>
-
-        <ul class="works__nav wow fadeInUp">
-          <li class="current works__nav-item" data-filter="*">Favorite</li>
-          <li class="current works__nav-item none-el" data-filter="*">Everything</li>
-          <li class="works__nav-item none-el" data-filter=".application">Application</li>
-          <li class="works__nav-item none-el" data-filter=".ecommerce">Ecommerce</li>
-          <li class="works__nav-item none-el" data-filter=".ui_template">UI Design</li>
-          <li class="works__nav-item none-el" data-filter=".form_validation">Form Validation</li>
-          <li class="works__nav-item none-el" data-filter=".api">API</li>
-        </ul>
-
-        <div class="works__list">
-          <!-- 454x560 -->
-          <!-- Messenger -->
-          <div class="works__item application api wow fadeInUpBig">
-            <span class="category">Application, API</span>
-            <a href="#small-dialog-9" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">ReactJS, React Hooks, Firebase, API</span>
-                  <h4 class="title">Messenger</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
+              <div class="experience__item wow fadeInUp">
+                <div class="experience-icon-wrapper">
+                  <div class="trinity-rings-spinner">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
                 </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="./images/works/9.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
+                <span class="time">2019</span>
+                <h3 class="title">Honours Degree</h3>
+                <p>
+                  The ICPC 2019 - International Collegiate Programming Contest
+                </p>
               </div>
-            </a>
-            <div id="small-dialog-9" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/9.png" alt="image" />
-              <h2>Messenger-Facebook Created Using ReactJS.</h2>
-              <p>Register, login (login with Facebook and Google accounts via API).</p>
-              <p>Create chat rooms and add members.</p>
-              <p>Chat content includes text messages, stickers, emoji and images.</p>
-              <p>Dark/Light mode.</p>
-              <p>Responsive for the interface on laptops and phones.</p>
-              <div class="button">
-                <a href="https://messenger-facebook-12227.web.app/login" target="_blank" class="btn">View on Website</a>
+
+              <div class="experience__item wow fadeInUp">
+                <div class="experience-icon-wrapper">
+                  <div class="trinity-rings-spinner">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
+                </div>
+                <span class="time">2019</span>
+                <h3 class="title">Honours Degree</h3>
+                <p>
+                  The Supporter of World Friends ICT Volunteers (KIV)/2019 - Can
+                  Tho University
+                </p>
               </div>
             </div>
-          </div>
 
-          <!-- Nobita Home -->
-          <div class="works__item application ecommerce wow fadeInUpBig">
-            <span class="category">Application, Ecommerce</span>
-            <a href="#small-dialog-10" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">ReactJS, React Hooks, Redux, API</span>
-                  <h4 class="title">Nobita Home</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
+            <div class="experience__list experience__list-exp wow fadeInRight">
+              <div class="experience__item wow fadeInUp">
+                <div class="experience-icon-wrapper">
+                  <div class="trinity-rings-spinner">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
                 </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="images/works/10.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
-              </div>
-            </a>
-            <div id="small-dialog-10" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/10.png" alt="image" />
-              <h2>Nobita Home Created Using ReactJS</h2>
-              <p>Ecommerce Nobita Home.</p>
-              <p>Code with ReactJS, React Hooks, Redux.</p>
-              <p>Have responsive web.</p>
-              <p>Website is under development.</p>
-              <div class="button">
-                <a href="https://nvanha.github.io/nobita_home/" target="_blank" class="btn">View on Website</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Movie App -->
-          <div class="works__item application api wow fadeInUpBig">
-            <span class="category">Application, API</span>
-            <a href="#small-dialog-22" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">ReactJS, React Hooks, API</span>
-                  <h4 class="title">Movie App</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
-                </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="images/works/22.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
-              </div>
-            </a>
-            <div id="small-dialog-22" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/22.png" alt="image" />
-              <h2>Movie App</h2>
-              <p>React Movies App With API.</p>
-              <div class="button">
-                <a href="https://nvanha.github.io/react-movie-app/" target="_blank" class="btn">View on Website</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Shopee MVC -->
-          <div class="works__item ecommerce wow fadeInUpBig">
-            <span class="category">Ecommerce</span>
-            <a href="#small-dialog-13" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">PHP, JavaScript, MySQL</span>
-                  <h4 class="title">Shopee MVC</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
-                </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="images/works/13.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
-              </div>
-            </a>
-            <div id="small-dialog-13" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/13.png" alt="image" />
-              <h2>Shopee MVC in PHP</h2>
-              <p>This is the website converted from PSD to HTML and CSS, cloned from `shopee.vn`.</p>
-              <p>Source code with full basic functions of user and admin.</p>
-              <p>Site is built from HTML, CSS, JavaScript, MySql, PHP, not Framework.</p>
-              <p>Not yet responsive web.</p>
-              <div class="button">
-                <a href="https://github.com/nvanha/shopee_mvc" target="_blank" class="btn">View on Github</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Nike Webshop -->
-          <div class="works__item application ecommerce wow fadeInUpBig">
-            <span class="category">Application, Ecommerce</span>
-            <a href="#small-dialog-14" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">ReactJS, React Hooks, NodeJS</span>
-                  <h4 class="title">Nike WebShop</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
-                </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="images/works/14.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
-              </div>
-            </a>
-            <div id="small-dialog-14" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/14.png" alt="image" />
-              <h2>Nike Website Created Using ReactJS</h2>
-              <p>Ecommerce Nike Website.</p>
-              <p>Code with ReactJS, React Hooks.</p>
-              <p>Have responsive web.</p>
-              <p>Website is under development.</p>
-              <div class="button">
-                <a href="https://nvanha.github.io/nike_webshop/" target="_blank" class="btn">View on Website</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Facial Recognition -->
-          <div class="works__item api application wow fadeInUpBig">
-            <span class="category">API, Application</span>
-            <a href="#small-dialog-12" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">ReactJS, API, NodeJS</span>
-                  <h4 class="title">Facial Recognition</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
-                </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="images/works/12.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
-              </div>
-            </a>
-            <div id="small-dialog-12" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/12.png" alt="image" />
-              <h2>Facial Recognition Created Using ReactJS and FaceAPI</h2>
-              <p>Machine learning technique that detects different points on your face.</p>
-              <p>Web application for face recognition, and facial expression detection.</p>
-              <p>Compatible with Mobile (IOS, Android) and Desktop.</p>
-              <p>Have responsive web.</p>
-              <div class="button">
-                <a href="https://nvanha.github.io/facial_recognition" target="_blank" class="btn">View on Website</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hand Pose Recognition -->
-          <div class="works__item api application wow fadeInUpBig">
-            <span class="category">API, Application</span>
-            <a href="#small-dialog-11" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">ReactJS, Tensorflow, NodeJS</span>
-                  <h4 class="title">Hand Pose Recognition</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
-                </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="images/works/11.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
-              </div>
-            </a>
-            <div id="small-dialog-11" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/11.png" alt="image" />
-              <h2>Hand Pose Recognition Created Using ReactJS and Tensorflow Library</h2>
-              <p>Machine learning technique that detects different points on yout hand.</p>
-              <p>These points are commonly referred to as landmarks.</p>
-              <p>Web application for face recognition, and facial expression detection.</p>
-              <p>Compatible with Mobile (IOS, Android) and Desktop.</p>
-              <p>Have responsive web.</p>
-              <div class="button">
-                <a href="https://nvanha.github.io/hand_pose_recognition/" target="_blank" class="btn">View on
-                  Website</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bakery Ecommerce UI -->
-          <div class="works__item ecommerce ui_template wow fadeInUpBig">
-            <span class="category">Application, UI Template</span>
-            <a href="#small-dialog-23" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">HTML, SCSS, JavScript</span>
-                  <h4 class="title">Bakery Ecommerce UI</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
-                </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="images/works/23.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
-              </div>
-            </a>
-            <div id="small-dialog-23" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/23.png" alt="image" />
-              <h2>Bakery Ecommerce UI</h2>
-              <p>Bakery Ecommerce UI using HTML/SCSS/JavaScript.</p>
-              <div class="button">
-                <a href="https://nvanha.github.io/bakery-ecommerce-ui/" target="_blank" class="btn">View on Website</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 50 Projects HTML/CSS/JavaScript -->
-          <div class="works__item application ui_template wow fadeInUpBig">
-            <span class="category">Application, UI Template</span>
-            <a href="#small-dialog-16" class="work-content">
-              <div class="works__item-inner">
-                <div class="details">
-                  <span class="term">ReactJS, HTML, CSS, JavScript</span>
-                  <h4 class="title">50 Projects HTML/CSS/JavaScript</h4>
-                  <span class="more-button"><i class="icon-link"></i></span>
-                </div>
-                <div class="thumb">
-                  <img
-                    src="./images/loading.gif"
-                    lazy-src="images/works/16.png" alt="image" />
-                  <div class="mask"></div>
-                </div>
-              </div>
-            </a>
-            <div id="small-dialog-16" class="white-popup zoom-anim-dialog mfp-hide">
-              <img
-                src="./images/loading.gif"
-                lazy-src="images/works/16.png" alt="image" />
-              <h2>Collection 50 Projects HTML/CSS/JavaScript</h2>
-              <p>50 unique mini-projects to sharpen your HTML, CSS & JavaScript skills.</p>
-              <div class="button">
-                <a href="https://nvanha.github.io/50-projects-html-css-javascript/" target="_blank" class="btn">View on
-                  Website</a>
+                <span class="time">Nov, 2021 - Present</span>
+                <h2 class="title">Front-end Web Development</h2>
+                <h3 class="company">
+                  <a
+                    href="https://au.linkedin.com/company/credshare"
+                    target="_blank"
+                    >CredShare</a
+                  >
+                </h3>
+                <p>
+                  I am a Front-end developer at CredShare with ReactJS technology
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="load-more wow fadeInUp">
-          <div class="button">
-            <a href="javascript:" class="btn"><i class="fa fa-spinner"></i>Load more</a>
+      <section id="works" class="works">
+        <div class="container">
+          <div class="section-title wow fadeInLeft">
+            <div class="square-wrapper">
+              <div class="self-building-square-spinner">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square clear"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square clear"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+              </div>
+            </div>
+            <span>Recent Works</span>
           </div>
-          <ul class="portfolio-pagination">
-            <li class="list-inline-item">1</li>
-            <li class="list-inline-item"><a href="works-2.htm">2</a></li>
+
+          <div class="pf-filter-wrapper wow fadeInUp">
+            <select class="portfolio-filter-mobile">
+              <option value="*">Everything</option>
+              <option value=".application">Application</option>
+              <option value=".ecommerce">Ecommerce</option>
+              <option value=".ui_template">UI Design</option>
+              <option value=".form_validation">Form Validation</option>
+              <option value=".api">API</option>
+            </select>
+          </div>
+
+          <ul class="works__nav wow fadeInUp">
+            <li class="current works__nav-item" data-filter="*">Favorite</li>
+            <li class="current works__nav-item none-el" data-filter="*">
+              Everything
+            </li>
+            <li class="works__nav-item none-el" data-filter=".application">
+              Application
+            </li>
+            <li class="works__nav-item none-el" data-filter=".ecommerce">
+              Ecommerce
+            </li>
+            <li class="works__nav-item none-el" data-filter=".ui_template">
+              UI Design
+            </li>
+            <li class="works__nav-item none-el" data-filter=".form_validation">
+              Form Validation
+            </li>
+            <li class="works__nav-item none-el" data-filter=".api">API</li>
           </ul>
-        </div>
-      </div>
-    </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-title wow fadeInLeft">
-          <div class="square-wrapper">
-            <div class="self-building-square-spinner">
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square clear"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square clear"></div>
-              <div class="square"></div>
-              <div class="square"></div>
+          <div class="works__list">
+            <!-- 454x560 -->
+            <!-- Messenger -->
+            <div class="works__item application api wow fadeInUpBig">
+              <span class="category">Application, API</span>
+              <a href="#small-dialog-9" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term"
+                      >ReactJS, React Hooks, Firebase, API</span
+                    >
+                    <h4 class="title">Messenger</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="./images/works/9.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-9"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/9.png"
+                  alt="image"
+                />
+                <h2>Messenger-Facebook Created Using ReactJS.</h2>
+                <p>
+                  Register, login (login with Facebook and Google accounts via
+                  API).
+                </p>
+                <p>Create chat rooms and add members.</p>
+                <p>
+                  Chat content includes text messages, stickers, emoji and
+                  images.
+                </p>
+                <p>Dark/Light mode.</p>
+                <p>Responsive for the interface on laptops and phones.</p>
+                <div class="button">
+                  <a
+                    href="https://messenger-facebook-12227.web.app/login"
+                    target="_blank"
+                    class="btn"
+                    >View on Website</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Nobita Home -->
+            <div class="works__item application ecommerce wow fadeInUpBig">
+              <span class="category">Application, Ecommerce</span>
+              <a href="#small-dialog-10" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term">ReactJS, React Hooks, Redux, API</span>
+                    <h4 class="title">Nobita Home</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="images/works/10.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-10"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/10.png"
+                  alt="image"
+                />
+                <h2>Nobita Home Created Using ReactJS</h2>
+                <p>Ecommerce Nobita Home.</p>
+                <p>Code with ReactJS, React Hooks, Redux.</p>
+                <p>Have responsive web.</p>
+                <p>Website is under development.</p>
+                <div class="button">
+                  <a
+                    href="https://nvanha.github.io/nobita_home/"
+                    target="_blank"
+                    class="btn"
+                    >View on Website</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Movie App -->
+            <div class="works__item application api wow fadeInUpBig">
+              <span class="category">Application, API</span>
+              <a href="#small-dialog-22" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term">ReactJS, React Hooks, API</span>
+                    <h4 class="title">Movie App</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="images/works/22.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-22"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/22.png"
+                  alt="image"
+                />
+                <h2>Movie App</h2>
+                <p>React Movies App With API.</p>
+                <div class="button">
+                  <a
+                    href="https://nvanha.github.io/react-movie-app/"
+                    target="_blank"
+                    class="btn"
+                    >View on Website</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Shopee MVC -->
+            <div class="works__item ecommerce wow fadeInUpBig">
+              <span class="category">Ecommerce</span>
+              <a href="#small-dialog-13" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term">PHP, JavaScript, MySQL</span>
+                    <h4 class="title">Shopee MVC</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="images/works/13.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-13"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/13.png"
+                  alt="image"
+                />
+                <h2>Shopee MVC in PHP</h2>
+                <p>
+                  This is the website converted from PSD to HTML and CSS, cloned
+                  from `shopee.vn`.
+                </p>
+                <p>Source code with full basic functions of user and admin.</p>
+                <p>
+                  Site is built from HTML, CSS, JavaScript, MySql, PHP, not
+                  Framework.
+                </p>
+                <p>Not yet responsive web.</p>
+                <div class="button">
+                  <a
+                    href="https://github.com/nvanha/shopee_mvc"
+                    target="_blank"
+                    class="btn"
+                    >View on Github</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Nike Webshop -->
+            <div class="works__item application ecommerce wow fadeInUpBig">
+              <span class="category">Application, Ecommerce</span>
+              <a href="#small-dialog-14" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term">ReactJS, React Hooks, NodeJS</span>
+                    <h4 class="title">Nike WebShop</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="images/works/14.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-14"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/14.png"
+                  alt="image"
+                />
+                <h2>Nike Website Created Using ReactJS</h2>
+                <p>Ecommerce Nike Website.</p>
+                <p>Code with ReactJS, React Hooks.</p>
+                <p>Have responsive web.</p>
+                <p>Website is under development.</p>
+                <div class="button">
+                  <a
+                    href="https://nvanha.github.io/nike_webshop/"
+                    target="_blank"
+                    class="btn"
+                    >View on Website</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Facial Recognition -->
+            <div class="works__item api application wow fadeInUpBig">
+              <span class="category">API, Application</span>
+              <a href="#small-dialog-12" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term">ReactJS, API, NodeJS</span>
+                    <h4 class="title">Facial Recognition</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="images/works/12.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-12"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/12.png"
+                  alt="image"
+                />
+                <h2>Facial Recognition Created Using ReactJS and FaceAPI</h2>
+                <p>
+                  Machine learning technique that detects different points on
+                  your face.
+                </p>
+                <p>
+                  Web application for face recognition, and facial expression
+                  detection.
+                </p>
+                <p>Compatible with Mobile (IOS, Android) and Desktop.</p>
+                <p>Have responsive web.</p>
+                <div class="button">
+                  <a
+                    href="https://nvanha.github.io/facial_recognition"
+                    target="_blank"
+                    class="btn"
+                    >View on Website</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Hand Pose Recognition -->
+            <div class="works__item api application wow fadeInUpBig">
+              <span class="category">API, Application</span>
+              <a href="#small-dialog-11" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term">ReactJS, Tensorflow, NodeJS</span>
+                    <h4 class="title">Hand Pose Recognition</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="images/works/11.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-11"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/11.png"
+                  alt="image"
+                />
+                <h2>
+                  Hand Pose Recognition Created Using ReactJS and Tensorflow
+                  Library
+                </h2>
+                <p>
+                  Machine learning technique that detects different points on
+                  yout hand.
+                </p>
+                <p>These points are commonly referred to as landmarks.</p>
+                <p>
+                  Web application for face recognition, and facial expression
+                  detection.
+                </p>
+                <p>Compatible with Mobile (IOS, Android) and Desktop.</p>
+                <p>Have responsive web.</p>
+                <div class="button">
+                  <a
+                    href="https://nvanha.github.io/hand_pose_recognition/"
+                    target="_blank"
+                    class="btn"
+                    >View on Website</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Bakery Ecommerce UI -->
+            <div class="works__item ecommerce ui_template wow fadeInUpBig">
+              <span class="category">Application, UI Template</span>
+              <a href="#small-dialog-23" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term">HTML, SCSS, JavScript</span>
+                    <h4 class="title">Bakery Ecommerce UI</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="images/works/23.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-23"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/23.png"
+                  alt="image"
+                />
+                <h2>Bakery Ecommerce UI</h2>
+                <p>Bakery Ecommerce UI using HTML/SCSS/JavaScript.</p>
+                <div class="button">
+                  <a
+                    href="https://nvanha.github.io/bakery-ecommerce-ui/"
+                    target="_blank"
+                    class="btn"
+                    >View on Website</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- 50 Projects HTML/CSS/JavaScript -->
+            <div class="works__item application ui_template wow fadeInUpBig">
+              <span class="category">Application, UI Template</span>
+              <a href="#small-dialog-16" class="work-content">
+                <div class="works__item-inner">
+                  <div class="details">
+                    <span class="term">ReactJS, HTML, CSS, JavScript</span>
+                    <h4 class="title">50 Projects HTML/CSS/JavaScript</h4>
+                    <span class="more-button"><i class="icon-link"></i></span>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="./images/loading.gif"
+                      lazy-src="images/works/16.png"
+                      alt="image"
+                    />
+                    <div class="mask"></div>
+                  </div>
+                </div>
+              </a>
+              <div
+                id="small-dialog-16"
+                class="white-popup zoom-anim-dialog mfp-hide"
+              >
+                <img
+                  src="./images/loading.gif"
+                  lazy-src="images/works/16.png"
+                  alt="image"
+                />
+                <h2>Collection 50 Projects HTML/CSS/JavaScript</h2>
+                <p>
+                  50 unique mini-projects to sharpen your HTML, CSS & JavaScript
+                  skills.
+                </p>
+                <div class="button">
+                  <a
+                    href="https://nvanha.github.io/50-projects-html-css-javascript/"
+                    target="_blank"
+                    class="btn"
+                    >View on Website</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <span>Get In Touch</span>
-        </div>
-        <div class="contact__inner">
-          <div class="contact-info wow fadeInLeft">
-            <h3 class="wow fadeInUp">Let's talk about everything!</h3>
-            <p class="wow fadeInUp">Don't like forms? Sent me an <a href="mailto:nvha1120@gmail.com">email</a>. Or
-              contact with me in other media social 👋!</p>
-            <ul class="social">
-              <li class="social-item" title="facebook"><a href="https://www.facebook.com/nvh1120" target="_blank"><img
-                    src="images/icons/facebook.svg" alt="facebook"></a></li>
-              <li class="social-item" title="instagram"><a href="https://www.instagram.com/_haa_nguyen"
-                  target="_blank"><img src="images/icons/instagram.svg" alt="instagram"></a></li>
-              <li class="social-item" title="codepen"><a href="https://codepen.io/nvanha" target="_blank"><img
-                    src="images/icons/codepen.svg" alt="codepen"></a></li>
-              <li class="social-item" title="tik-tok"><a href="https://www.tiktok.com/@nvan.ha" target="_blank"><img
-                    src="images/icons/tik-tok.svg" alt="tik-tok"></a></li>
-              <li class="social-item" title="github"><a href="https://github.com/nvanha" target="_blank"><img
-                    src="images/icons/github.svg" alt="github"></a></li>
+
+          <div class="load-more wow fadeInUp">
+            <div class="button">
+              <a href="javascript:" class="btn"
+                ><i class="fa fa-spinner"></i>Load more</a
+              >
+            </div>
+            <ul class="portfolio-pagination">
+              <li class="list-inline-item">1</li>
+              <li class="list-inline-item"><a href="works-2.htm">2</a></li>
             </ul>
           </div>
-          <div class="contact-bg wow fadeInRight">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62860.63914868847!2d105.7225507414426!3d10.034185113829922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0629f6de3edb7%3A0x527f09dbfb20b659!2zQ-G6p24gVGjGoSwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1618554810319!5m2!1svi!2s"
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title wow fadeInLeft">
+            <div class="square-wrapper">
+              <div class="self-building-square-spinner">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square clear"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square clear"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+              </div>
+            </div>
+            <span>Get In Touch</span>
+          </div>
+          <div class="contact__inner">
+            <div class="contact-info wow fadeInLeft">
+              <h3 class="wow fadeInUp">Let's talk about everything!</h3>
+              <p class="wow fadeInUp">
+                Don't like forms? Sent me an
+                <a href="mailto:nvha1120@gmail.com">email</a>. Or contact with
+                me in other media social 👋!
+              </p>
+              <ul class="social">
+                <li class="social-item" title="facebook">
+                  <a href="https://www.facebook.com/nvh1120" target="_blank"
+                    ><img src="images/icons/facebook.svg" alt="facebook"
+                  /></a>
+                </li>
+                <li class="social-item" title="instagram">
+                  <a
+                    href="https://www.instagram.com/_haa_nguyen"
+                    target="_blank"
+                    ><img src="images/icons/instagram.svg" alt="instagram"
+                  /></a>
+                </li>
+                <li class="social-item" title="codepen">
+                  <a href="https://codepen.io/nvanha" target="_blank"
+                    ><img src="images/icons/codepen.svg" alt="codepen"
+                  /></a>
+                </li>
+                <li class="social-item" title="tik-tok">
+                  <a href="https://www.tiktok.com/@nvan.ha" target="_blank"
+                    ><img src="images/icons/tik-tok.svg" alt="tik-tok"
+                  /></a>
+                </li>
+                <li class="social-item" title="github">
+                  <a href="https://github.com/nvanha" target="_blank"
+                    ><img src="images/icons/github.svg" alt="github"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="contact-bg wow fadeInRight">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62860.63914868847!2d105.7225507414426!3d10.034185113829922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0629f6de3edb7%3A0x527f09dbfb20b659!2zQ-G6p24gVGjGoSwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1618554810319!5m2!1svi!2s"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__list wow fadeInDown">
+          <div class="footer__item">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="footer__item">
+            <i class="fab fa-node"></i>
+          </div>
+          <div class="footer__item">
+            <i class="fab fa-bootstrap"></i>
+          </div>
+          <div class="footer__item">
+            <i class="fab fa-php"></i>
+          </div>
+          <div class="footer__item">
+            <i class="fab fa-laravel"></i>
+          </div>
+          <div class="footer__item">
+            <i class="fab fa-wordpress"></i>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__list wow fadeInDown">
-        <div class="footer__item">
-          <i class="fab fa-react"></i>
-        </div>
-        <div class="footer__item">
-          <i class="fab fa-node"></i>
-        </div>
-        <div class="footer__item">
-          <i class="fab fa-bootstrap"></i>
-        </div>
-        <div class="footer__item">
-          <i class="fab fa-php"></i>
-        </div>
-        <div class="footer__item">
-          <i class="fab fa-laravel"></i>
-        </div>
-        <div class="footer__item">
-          <i class="fab fa-wordpress"></i>
-        </div>
-      </div>
+    <div class="theme-switch-wrapper">
+      <label for="checkbox" class="theme-switch">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
     </div>
-  </footer>
 
-  <div class="theme-switch-wrapper">
-    <label for="checkbox" class="theme-switch">
-      <input type="checkbox" id="checkbox" />
-      <div class="slider round"></div>
-    </label>
-  </div>
+    <a href="javascript:" id="return-to-top" class="return-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
 
-  <a href="javascript:" id="return-to-top" class="return-to-top"><i class="fa fa-arrow-up"></i></a>
-
-  <script src="js/jquery-1.12.3.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.counterup.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/infinite-scroll.min.js"></script>
-  <script src="js/imagesloaded.pkgd.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/morphext.min.js"></script>
-  <script src="js/parallax.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="js/lazy-loading.js"></script>
-  <script src="js/darkmode.js"></script>
-</body>
-
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/infinite-scroll.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/morphext.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/lazy-loading.js"></script>
+    <script src="js/darkmode.js"></script>
+  </body>
 </html>

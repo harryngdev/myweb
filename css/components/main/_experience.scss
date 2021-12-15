@@ -1,0 +1,203 @@
+.experience {
+  &__category {
+    margin: 7rem 9.1rem 0 9.1rem;
+
+    @include flex(stretch, space-between);
+
+    @include tablet(1279px) {
+      margin: 5rem 3.1rem 0 3.1rem;
+    }
+
+    @include mobile(767px) {
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    width: calc(50% - 2rem);
+    background-color: var(--color-boxcontent-bg);
+    border-radius: 0.7rem;
+    border: 1px solid var(--color-border-primary);
+    padding: 4rem 3.5rem 4rem 3rem;
+
+    @include flex(stretch, flex-start, wrap);
+
+    @include mobile(767px) {
+      width: 80%;
+
+      &:last-child {
+        margin-top: 3rem;
+      }
+    }
+
+    @include mobile(479px) {
+      width: 100%;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+  }
+
+  &__item {
+    border-left: 1px solid var(--color-border-secondary);
+    position: relative;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+    width: 100%;
+
+    .experience-icon-wrapper {
+      position: absolute;
+      top: 0;
+      left: -21px;
+      width: 4rem;
+      height: 4rem;
+
+      // edu
+      .trinity-rings-spinner,
+      .trinity-rings-spinner * {
+        box-sizing: border-box;
+      }
+
+      .trinity-rings-spinner {
+        height: 4rem;
+        width: 4rem;
+        padding: 3px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .trinity-rings-spinner .circle {
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        border: 3px solid #ff4c60;
+        opacity: 1;
+      }
+
+      .trinity-rings-spinner .circle:nth-child(1) {
+        height: 3.4rem;
+        width: 3.4rem;
+        animation: trinity-rings-spinner-circle1-animation 1.5s infinite linear;
+        border-width: 3px;
+      }
+
+      .trinity-rings-spinner .circle:nth-child(2) {
+        height: calc(3.4rem * 0.65);
+        width: calc(3.4rem * 0.65);
+        animation: trinity-rings-spinner-circle2-animation 1.5s infinite linear;
+        border-width: 2px;
+      }
+
+      .trinity-rings-spinner .circle:nth-child(3) {
+        height: calc(3.4rem * 0.1);
+        width: calc(3.4rem * 0.1);
+        animation: trinity-rings-spinner-circle3-animation 1.5s infinite linear;
+        border-width: 1px;
+      }
+
+      // exp
+      .orbit-spinner,
+      .orbit-spinner * {
+        box-sizing: border-box;
+      }
+
+      .orbit-spinner {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        perspective: 800px;
+      }
+
+      .orbit-spinner .orbit {
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .orbit-spinner .orbit:nth-child(1) {
+        left: 0%;
+        top: 0%;
+        animation: orbit-spinner-orbit-one-animation 1200ms linear infinite;
+        border-bottom: 3px solid #ff4c60;
+      }
+
+      .orbit-spinner .orbit:nth-child(2) {
+        right: 0%;
+        top: 0%;
+        animation: orbit-spinner-orbit-two-animation 1200ms linear infinite;
+        border-right: 3px solid #ff4c60;
+      }
+
+      .orbit-spinner .orbit:nth-child(3) {
+        right: 0%;
+        bottom: 0%;
+        animation: orbit-spinner-orbit-three-animation 1200ms linear infinite;
+        border-top: 3px solid #ff4c60;
+      }
+    }
+
+    .time {
+      color: var(--color-text-secondary);
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .title {
+      font-size: 2.1rem;
+      margin-top: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--color-text-primary);
+    }
+
+    .company > a {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      display: inline-block;
+      color: var(--color-text-primary);
+      transition: color 150ms ease-in;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -.2rem;
+        left: 0;
+        width: 100%;
+        height: .5rem;
+        background-color: $primary-text;
+        transition: all 150ms ease-out;
+      }
+
+      &:hover {
+        color: $primary-text !important;
+
+        &:after {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      letter-spacing: 0.5px;
+      line-height: 2.5rem;
+      color: var(--color-text-primary);
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.contact {
+  &__inner {
+    margin: 7rem 9.1rem 0 9.1rem;
+    height: 250px;
+    @include flex(flex-start, space-between);
+    @include tablet(1279px) {
+      margin: 5rem 3.1rem 0 3.1rem;
+    }
+    @include mobile(767px) {
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      height: auto;
+    }
+  }
+  &-info {
+    width: calc(50% - 2rem);
+    height: 100%;
+    h3 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--color-text-primary);
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2rem;
+      letter-spacing: 0.5px;
+      color: var(--color-text-primary);
+      a {
+        font-weight: 600;
+        color: $red;
+        transition: all 0.25s ease-in-out;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .social {
+      margin-top: 2rem;
+      @include flex();
+      &-item {
+        width: 3rem;
+        transition: all 0.25s ease-in-out;
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+    @include mobile(767px) {
+      width: 100%;
+      padding-bottom: 8rem;
+    }
+  }
+  &-bg {
+    height: 100%;
+    width: calc(50% - 2rem);
+    border-radius: 1.5rem !important;
+    box-shadow: 2px 2px 8px rgba(255, 76, 96, 0.09);
+    overflow: hidden !important;
+    @include mobile(767px) {
+      width: 100%;
+      height: 250px;
+    }
+  }
+}

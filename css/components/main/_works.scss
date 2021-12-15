@@ -1,0 +1,213 @@
+.works {
+  .pf-filter-wrapper {
+    margin: 3rem 3.1rem 0 3.1rem;
+    display: none;
+    .portfolio-filter-mobile {
+      width: 100%;
+      border: 0;
+      background-color: var(--color-btn-bg) !important;
+      border-radius: 0.7rem;
+      border: 1px solid var(--color-btn-border) !important;
+      padding: 1rem 2rem;
+      outline: none;
+      color: var(--color-text-primary);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-family: "Quicksand", sans-serif;
+      appearance: none;
+      cursor: pointer;
+      option {
+        color: var(--color-text-primary);
+        font-size: 1.6rem;
+        font-weight: 700;
+        font-family: "Quicksand", sans-serif;
+        background-color: var(--color-btn-bg);
+        border: 0;
+        outline: none;
+      }
+    }
+    @include mobile(767px) {
+      display: block;
+    }
+  }
+  &__nav {
+    margin: 7rem 9.1rem 0 9.1rem;
+    @include flex();
+    &-item {
+      cursor: pointer;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-right: 3rem;
+      letter-spacing: 0.5px;
+      transition: all 0.25s linear;
+      color: var(--color-text-primary);
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: $primary-text;
+      }
+      @include tablet(1104px) {
+        margin-right: 2rem;
+      }
+    }
+    .current {
+      color: $primary-text;
+    }
+    @include tablet(1279px) {
+      margin: 5rem 3.1rem 0 3.1rem;
+    }
+    @include mobile(767px) {
+      display: none;
+    }
+  }
+  &__list {
+    margin: 1rem 9.1rem 0 9.1rem;
+    @include flex(stretch, flex-start, wrap);
+    @include tablet(1279px) {
+      margin: 0 3.1rem 0 3.1rem;
+    }
+  }
+  &__item {
+    margin: 0 2rem;
+    width: calc(33.33% - 4rem);
+    margin-top: 3rem;
+    overflow: hidden;
+    border-radius: 0.7rem;
+    box-shadow: 2px 2px 8px var(--color-border-primary);
+    position: relative;
+    .category {
+      position: absolute;
+      top: 0;
+      left: 2rem;
+      z-index: 3;
+      margin-right: 2rem;
+      word-break: break-word;
+      color: $text-color-w;
+      background-color: $red;
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      padding: 5px 10px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    }
+    &-inner {
+      position: relative;
+      .details {
+        color: $text-color-w;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        h4 {
+          color: $text-color-w;
+          font-size: 2rem;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          padding: 1rem 2rem;
+          opacity: 0;
+          position: absolute;
+          top: 60px;
+          transform: translateY(30px) translateZ(0);
+          transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+        }
+        .term {
+          margin-right: 2rem;
+          word-break: break-word;
+          color: $text-color-w;
+          background-color: $red;
+          position: absolute;
+          top: 0;
+          left: 2rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+          letter-spacing: 0.3px;
+          padding: 5px 10px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-40px) translateZ(0);
+          transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+        }
+        .more-button {
+          color: $text-color-w;
+          background-color: $primary-text;
+          font-size: 2rem;
+          position: absolute;
+          bottom: 2rem;
+          left: 2rem;
+          width: 4rem;
+          height: 4rem;
+          text-align: center;
+          line-height: 4.2rem;
+          border-radius: 100%;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+        }
+      }
+      .thumb {
+        width: 100%;
+        height: 100%;
+        .mask {
+          background-color: $blue;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    &:hover {
+      .category {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-40px) translateZ(0);
+      }
+      .mask {
+        opacity: 0.9;
+      }
+      .details > h4,
+      .details > span {
+        opacity: 1;
+        transform: translateY(0) translateZ(0);
+        visibility: visible;
+      }
+      .details > .more-button {
+        opacity: 1;
+      }
+    }
+    @include tablet(1279px) {
+      margin: 0px 1rem;
+      width: calc(33.33% - 2rem);
+      margin-top: 3rem;
+    }
+    @include mobile(767px) {
+      width: calc(50% - 2rem);
+    }
+    @include mobile(479px) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .load-more {
+    margin-top: 3.5rem;
+    text-align: center;
+    .button {
+      i {
+        margin-right: 1rem;
+        display: none;
+      }
+    }
+    .portfolio-pagination {
+      display: none;
+    }
+  }
+}
