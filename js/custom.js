@@ -486,7 +486,7 @@ $(function () {
 
 $(function () {
   $(".text").typed({
-    strings: ["^700 hi, <span>nvan.ha</span> here"],
+    strings: ["^700 hi, <span>harry.n</span> here"],
     typeSpeed: 250,
     backSpeed: 100,
     loop: true,
