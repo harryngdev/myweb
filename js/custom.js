@@ -1,5 +1,12 @@
 $(window).on("load", function () {
-  "use strict";
+  $("body,html").animate(
+    {
+      scrollTop: 0, // Scroll to top of body
+    },
+    400
+  );
+
+  ("use strict");
   /*=============== Preloader ===============*/
   $("#preloader").delay(350).fadeOut("slow");
   // Because only Chrome supports offset-path, feGaussianBlur for now
